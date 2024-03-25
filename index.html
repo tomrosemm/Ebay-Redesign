@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+
+		#col-1 {
+		  position: relative;
+		  width: 20%;
+		  float: left;
+		  height: 100%;
+		  z-index: 1010101010
+		}
+
+		#col-2 {
+		  position: relative;
+		  width: 80%;
+		  float: left;
+		  height: 100%;
+		  z-index: 1010101010;
+		  text-align: center;
+		}
+		
+		#body_content {
+			
+		}
+		
+		
+	</style>
+    
+	<link href="css1.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<title>Ebay Home</title>
+</head>
+
+<body>
+	<div id="col-1">
+  		<h2>Advance Search</h2>
+		<br>
+            <div class="center">
+                <input type="button" value="Submit">
+                <input type="button" value="Reset">
+            </div>
+            <br>
+			<button type="button" class="collapsible">Keywords/Item #s and Options</button>
+			<div class="content">
+			  <p>Lorem ipsum</p>
+			</div>
+			<button type="button" class="collapsible">Categories</button>
+			<div class="content">
+			  <p>Lorem ipsum</p>
+			</div>
+			<button type="button" class="collapsible">Search Including</button>
+			<div class="content">
+			  <p>Lorem ipsum</p>
+			</div>
+            <button type="button" class="collapsible">Price</button>
+			<div class="content">
+			  <p>Lorem ipsum</p>
+			</div>
+            <button type="button" class="collapsible">Buying Format</button>
+			<div class="content">
+			  <p>Lorem ipsum</p>
+			</div>
+            <button type="button" class="collapsible">Condition</button>
+			<div class="content">
+			  <p>Lorem ipsum</p>
+			</div>
+            <button type="button" class="collapsible">Show Results</button>
+			<div class="content">
+			  <p>Lorem ipsum</p>
+			</div>
+            <button type="button" class="collapsible">Shipping Options</button>
+			<div class="content">
+			  <p>Lorem ipsum</p>
+            </div>
+            <button type="button" class="collapsible">Item Location</button>
+			<div class="content">
+			  <p>Lorem ipsum</p>
+            </div>
+            <button type="button" class="collapsible">Seller</button>
+			<div class="content">
+			  <p>Lorem ipsum</p>
+            </div>
+            <button type="button" class="collapsible">Results</button>
+			<div class="content">
+			  <p>Lorem ipsum</p>
+            </div>
+            <br>
+            <br>
+            <div class="center">
+                <input type="button" value="Submit">
+                <input type="button" value="Reset">
+            </div>
+            <br>
+	</div>
+	
+	<div id="col-2">
+        <a href="index.html">
+            <h1>Ebay</h1></a>
+            <input type="search" id="site-search" name="q">
+            <button>Search</button>
+            <br>
+            <br>
+			<div class="center">
+				<input type="button" value="Help" style="height:50px; width:100px">
+				<input type="button" value="Buy" style="height:50px; width:100px">
+				<input type="button" value="Sell" style="height:50px; width:100px">
+				<input type="button" value="Account" style="height:50px; width:100px">
+			</div>
+			<br>
+		<div id="body_content">
+			<h2>Home</h2>
+		</div>
+	</div>
+	
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) 
+        {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			  content.style.display = "none";
+			} 
+            else {
+			  content.style.display = "block";
+			}
+		  });
+		}
+    </script>
+</body>
+</html>
