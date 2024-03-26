@@ -8,7 +8,8 @@
 		  width: 20%;
 		  float: left;
 		  height: 100%;
-		  z-index: 1010101010
+		  z-index: 1010101010;
+
 		}
 
 		#col-2 {
@@ -35,10 +36,32 @@
 <body>
 	<div id="col-1">
 		<h2>Advance Search</h2>
-		  <br>
+		  <div class="center">
+			<input type="button" value="Submit">
+			<input type="button" value="Reset">
+			<br><br>
+			<label for="searchbar">Search Term or Item #: </label>
+			<input type="text" id="searchbar" name="searchbar">
+			<br><br>
+		</div>
 		  <button type="button" class="collapsible">Keywords/Item #s and Options</button>
 		  <div class="content">
-			<p>Lorem ipsum</p>
+			<form action="">
+				<label for="Keywords or Item Numbers: ">Keywords or Item Numbers: </label><br>
+				<input type="text" id="Keywords or Item Numbers: " name="Keywords or Item Numbers: "><br><br>
+
+			<label for="Keyword Options">Keyword Options: </label>
+				<select name="All Words, Any Order" id="All Words, Any Order">
+					<option value="All Words, Any Order">All Words, Any Order</option>
+					<option value="Any Words, Any Order">Any Words, Any Order</option>
+					<option value="Exact Words, Exact Order">Exact Words, Exact Order</option>
+					<option value="Exact Words, Any Order">Exact Words, Any Order</option>
+				</select>
+				<br><br>
+				<form action="">
+					<label for="Exclude Words: ">Exclude Words: </label><br>
+					<input type="text" id="Exclude Words: " name="Exclude Words: "><br>
+				  </form> <br>
 		  </div>
 		  <button type="button" class="collapsible">Categories</button>
 		  <div class="content">
@@ -46,14 +69,25 @@
 			<p>Electronics</p>
 		  </div>
 		  <button type="button" class="collapsible">Search Including</button>
-		  <div class="content">
-			<p>Lorem ipsum</p>
+			  <div class="content">
+				  <input type="checkbox" id="Title And Description" value="Title And Description">
+				  <label for="Title And Description">Title And Description</label> <br>
+
+				  <input type="checkbox" id="Completed Items" value="Completed Items">
+				  <label for="Completed Items">Completed Items</label> <br>
+
+				  <input type="checkbox" id="Sold Items" value="Sold Items">
+				  <label for="Sold Items">Sold Items</label> <br>
 		  </div>
 		  <button type="button" class="collapsible">Price</button>
-		  <div class="content">
-			<p>Show Items priced from $0-50 </p>
-			<input type="range" id="min" value="0" placeholder="Min Price" min="0" max="50" oninput="rangeValue.innerText = this.value">
-			<p id="rangeValue">0</p>
+			  <div class="content">
+				<br>
+				  Show Items priced from <p id="rangeValue">0</p>
+				  <input type="range" id="min" value="0" placeholder="Min Price" min="0" max="50" oninput="rangeValue.innerText = this.value">
+				  to<p id="rangeValue">50</p>
+				  <input type="range" id="max" value="0" placeholder="Max Price" min="0" max="50" oninput="rangeValue.innerText = this.value">
+				  <br>
+				  
 		  </div>
 		  <button type="button" class="collapsible">Buying Format</button>
 			  <div class="content">
@@ -63,55 +97,187 @@
 				  <label for="BIDF">Bid</label> <br>
 		  </div>
 		  <button type="button" class="collapsible">Condition</button>
-		  <div class="content">
-			<input type="radio" id="Damaged" value="Damaged" name="condition">
-				<label for="Damaged">Damaged</label> <br>
-				<input type="radio" id="used" value="Used" name="condition">
-				<label for="used">Used</label> <br>
-				<input type="radio" id="New" value="New" name="condition">
-				<label for="New">New</label> <br>
-				<input type="radio" id="Sealed" value="Sealed" name="condition">
-				<label for="Sealed">Sealed</label> <br>
+			  <div class="content">
+				  <input type="radio" id="New" value="New">
+				  <label for="New">New</label> <br>
+				  
+				  <input type="radio" id="Used" value="Used">
+				  <label for="Used">Used</label> <br>
+
+				  <input type="radio" id="Not Specified" value="Not Specified">
+				  <label for="Not Specified">Not Specified</label> <br>
+
 		  </div>
 		  <button type="button" class="collapsible">Show Results</button>
 			  <div class="content">
-				  <input type="checkbox" id="" value="">
-				  <label for=""></label> <br>
+				  <input type="checkbox" id="Free Returns" value="Free Returns">
+				  <label for="Free Returns">Free Returns</label> <br>
+
+				  <input type="checkbox" id="Returns Accepted" value="Returns Accepted">
+				  <label for="Returns Accepted">Returns Accepted</label> <br>
+				  
+				  <input type="checkbox" id="Authorized Seller" value="Authorized Seller">
+				  <label for="Authorized Seller">Authorized Seller</label> <br>
+				  
+				  <input type="checkbox" id="Deals and Savings" value="Deals and Savings">
+				  <label for="Deals and Savings">Deals and Savings</label> <br>
+				  
+				  <input type="checkbox" id="Sale Items" value="Sale Items">
+				  <label for="Sale Items">Sale Items</label> <br>
+				  
+				  <input type="checkbox" id="Listed as Lots" value="Listed as Lots">
+				  <label for="Listed as Lots">Listed as Lots</label> <br>
+				  
+				  <input type="checkbox" id="Benefits Charity" value="Benefits Charity">
+				  <label for="Benefits Charity">Benefits Charity</label> <br>
+				  
+				  <input type="checkbox" id="Authenticity guarantee" value="Authenticity guarantee">
+				  <label for="Authenticity guarantee">Authenticity guarantee</label> <br>
+
+				  <input type="checkbox" id="Items" value="Items">
+				  <label for="Items">Items </label>
+					  <select name="Ending Within" id="Ending Within">
+						  <option value="Ending Within">Ending Within </option>
+						  <option value="Ending in more Than">Ending in more Than </option>
+						  <option value="Started Within">Started Within </option>
+					  </select>
+					  <select name="1 hour" id="1 hour">
+						  <option value="1 hour">1 hour</option>
+						  <option value="2 hour">2 hour</option>
+						  <option value="3 hour">3 hour</option>
+						  <option value="4 hour">4 hour</option>
+						  <option value="5 hour">5 hour</option>
+						  <option value="12 hour">12 hour</option>
+						  <option value="24 hour">24 hour</option>
+						  <option value="2 Days">2 Days</option>
+						  <option value="3 Days">3 Days</option>
+						  <option value="4 Days">4 Days</option>
+						  <option value="5 Days">5 Days</option>
+						  <option value="6 Days">6 Days</option>
+						  <option value="7 Days">7 Days</option>
+					  </select> <br>
+				  
+				  <input type="checkbox" id="Number of Bids from" value="Number of Bids from">
+				  <label for="Number of Bids from">Number of Bids from </label>
+					  <select name="Lowest to Highest" id="Lowest to Highest">
+						  <option value="Lowest to Highest">Lowest to Highest </option>
+						  <option value="Highest to Lowest">Highest to Lowest </option>
+					  </select> <br>
+				  
+				  <input type="checkbox" id="Multiple Items From" value="Multiple Items From">
+				  <label for="Multiple Items From">Multiple Items (Quantity) From </label>
+					  <form action="">
+						  <label for="min">Min:</label><br>
+						  <input type="text" id="min" name="min"><br>
+						</form>
+				  <label for="to"> to </label>	
+					  <form action="">
+						  <label for="max">Max:</label><br>
+						  <input type="text" id="max" name="max"><br>
+						</form><br>
 		  </div>
 		  <button type="button" class="collapsible">Shipping Options</button>
 			  <div class="content">
-				  <input type="checkbox" id="IP" value="IP">
-				  <label for="IP">In Person</label> <br>
-				  <input type="checkbox" id="Shipping" value="Shipping">
-				  <label for="Shipping">Shipping</label> <br>
-				  <input type="checkbox" id="DOLock" value="DOLock">
-				  <label for="DOLock">Drop Off Locker</label> <br>
+				  <input type="checkbox" id="Default" value="Default">
+				  <label for="Default">Default</label> <br>
+
+				  <input type="checkbox" id="Items Within" value="Items Within">
+				  <label for="Items Within">Items Within</label> 
+					  <select name="10" id="10">
+						  <option value="10">10 </option>
+						  <option value="25">25 </option>
+						  <option value="50">50 </option>
+						  <option value="100">100 </option>
+						  <option value="200">200 </option>
+						  <option value="500">500 </option>
+						  <option value="1000">1000 </option>
+					  </select>
+				  <label for="Miles of Zip Code">Miles of Zip Code</label><br>
+
+				  <input type="checkbox" id="US Only" value="US Only">
+				  <label for="US Only">US Only</label> <br>
+
+				  <input type="checkbox" id="North America" value="North America">
+				  <label for="North America">North America</label> <br>
+
+				  <input type="checkbox" id="Worldwide" value="Worldwide">
+				  <label for="Worldwide">Worldwide</label> <br>
+
+				  <input type="checkbox" id="Located In " value="Located In ">
+				  <label for="Located In ">Located In </label> 
+					  <select name="10" id="10">
+						  <option value="Brazil">Brazil </option>
+						  <option value="China">China </option>
+						  <option value="India">India </option>
+						  <option value="United States">United States </option>
+					  </select><br>
+
+				  <input type="checkbox" id="Available to " value="Available to ">
+				  <label for="Available to ">Available to </label>
+					  <select name="10" id="10">
+						  <option value="Brazil">Brazil </option>
+						  <option value="China">China </option>
+						  <option value="India">India </option>
+						  <option value="United States">United States </option>
+					  </select> <br>
 		  </div>
 		  <button type="button" class="collapsible">Item Location</button>
-		  <div class="content">
-			<input type="checkbox" id="local" value="Local">
-			  <label for="local">Local</label> <br>
-			  <input type="checkbox" id="NA" value="NA">
-			  <label for="NA">North America</label> <br>
-			  <input type="checkbox" id="Worldwide" value="WorldWide">
-			  <label for="Worldwide">Worldwide</label> <br>
+			  <div class="content">
+				  <input type="checkbox" id="local" value="Local">
+					<label for="local">Local</label> <br>
+					<input type="checkbox" id="NA" value="NA">
+					<label for="NA">North America</label> <br>
+					<input type="checkbox" id="Worldwide" value="WorldWide">
+					<label for="Worldwide">Worldwide</label> <br>
 		  </div>
 		  <button type="button" class="collapsible">Seller</button>
 			  <div class="content">
-				  <input type="checkbox" id="5Star" value="5Star">
-				  <label for="5 Star Rated">5 Star Rated</label> <br>
-				  <input type="checkbox" id="4Star" value="4Star">
-				  <label for="4 Star Rated">4 Star Rated</label> <br>
-				  <input type="checkbox" id="3Star" value="3Star">
-				  <label for="3 Star Rated">3 Star Rated</label> <br>
-				  <input type="checkbox" id="2Star" value="2Star">
-				  <label for="2 Star Rated">2 Star Rated</label> <br>
-				  <input type="checkbox" id="1Star" value="1Star">
-				  <label for="1 Star Rated">1 Star Rated</label> <br>
+				  <input type="checkbox" id="Only Show Items From: " value="Only Show Items From: ">
+				  <label for="Only Show Items From: ">Only Show Items From: </label> <br>
+					  <select name="" id="">
+						  <option value="Include">Include </option>
+						  <option value="Exclude">Exclude </option>
+					  </select>
+					  <form action="">
+						  <label for="Specific Seller (ID)">Specific Seller (ID)</label><br>
+						  <input type="text" id="Specific Seller (ID)" name="Specific Seller (ID)"><br>
+						</form>
+
+				  <input type="radio" id="Sellers with Ebay Stores " value="Sellers with Ebay Stores ">
+				  <label for="Sellers with Ebay Stores ">Sellers with Ebay Stores </label>
+				  <br>
+				  
+				  <input type="radio" id="My Saved Sellers List" value="My Saved Sellers List">
+				  <label for="My Saved Sellers List">My Saved Sellers List</label> <br>
 		  </div>
 		  <button type="button" class="collapsible">Results</button>
-		  <div class="content">
-			<p>Lorem ipsum</p>
+			  <div class="content">
+				  <input type="checkbox" id="Sort By " value="Sort By ">
+				  <label for="Sort By ">Sort By </label>
+					  <select name="Time: Ending Soonest" id="Time: Ending Soonest">
+						  <option value="Time: Ending Soonest">Time: Ending Soonest </option>
+						  <option value="Time: Newly Listed">Time: Newly Listed </option>
+						  <option value="Price+Shipping: Lowest First">Lowest Total Price First</option>
+						  <option value="Price+Shipping: Highest First">Highest Total Price First</option>
+						  <option value="Distance: Nearest First">Distance: Nearest First </option>
+						  <option value="Distance: Farthest First">Distance: Farthest First </option>
+						  <option value="Best Match">Best Match </option>
+					  </select> <br>
+
+				  <input type="checkbox" id="View Results " value="View Results ">
+				  <label for="View Results ">View Results </label>
+					  <select name="Time: Ending Soonest" id="Time: Ending Soonest">
+						  <option value="List View">List View</option>
+						  <option value="Gallery View">Gallery View</option>
+					  </select> <br>
+
+				  <input type="checkbox" id="Results Per Page " value="Results Per Page ">
+				  <label for="Results Per Page ">Results Per Page </label>
+					  <select name="60" id="60">
+						  <option value="60">60</option>
+						  <option value="120">120</option>
+						  <option value="240">240</option>
+					  </select> <br>
 		  </div>
 		  <br>
 		  <br>

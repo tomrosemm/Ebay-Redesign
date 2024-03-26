@@ -36,7 +36,12 @@
 	<div id="col-1">
 		<h2>Advance Search</h2>
 		  <br>
-		  <button type="button" class="collapsible">Keywords/Item #s and Options</button>
+		  <div class="center">
+			<input type="button" value="Submit">
+			<input type="button" value="Reset">
+		</div>
+		<br>
+		  <button type="button" class="collapsible">Keywords / Item #'s and Options</button>
 		  <div class="content">
 			<p>Lorem ipsum</p>
 		  </div>
@@ -64,7 +69,14 @@
 		  </div>
 		  <button type="button" class="collapsible">Condition</button>
 		  <div class="content">
-			<p>Lorem ipsum</p>
+			<input type="radio" id="Damaged" value="Damaged" name="condition">
+				<label for="Damaged">Damaged</label> <br>
+				<input type="radio" id="used" value="Used" name="condition">
+				<label for="used">Used</label> <br>
+				<input type="radio" id="New" value="New" name="condition">
+				<label for="New">New</label> <br>
+				<input type="radio" id="Sealed" value="Sealed" name="condition">
+				<label for="Sealed">Sealed</label> <br>
 		  </div>
 		  <button type="button" class="collapsible">Show Results</button>
 			  <div class="content">
@@ -81,13 +93,13 @@
 				  <label for="DOLock">Drop Off Locker</label> <br>
 		  </div>
 		  <button type="button" class="collapsible">Item Location</button>
-			  <div class="content">
-				  <input type="checkbox" id="local" value="Local">
-					<label for="local">Local</label> <br>
-					<input type="checkbox" id="NA" value="NA">
-					<label for="NA">North America</label> <br>
-					<input type="checkbox" id="Worldwide" value="WorldWide">
-					<label for="Worldwide">Worldwide</label> <br>
+		  <div class="content">
+			<input type="checkbox" id="local" value="Local">
+			  <label for="local">Local</label> <br>
+			  <input type="checkbox" id="NA" value="NA">
+			  <label for="NA">North America</label> <br>
+			  <input type="checkbox" id="Worldwide" value="WorldWide">
+			  <label for="Worldwide">Worldwide</label> <br>
 		  </div>
 		  <button type="button" class="collapsible">Seller</button>
 			  <div class="content">
