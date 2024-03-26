@@ -40,6 +40,10 @@
   background-color: #f1f1f1;
 }
 
+.logo {
+  font-size: 100px;
+}
+
 h1 {
 	text-align: center
    }
@@ -52,23 +56,31 @@ h2 {
 a:link {
   color: black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* visited link */
 a:visited {
   color: black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* mouse over link */
 a:hover {
   color: black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* selected link */
 a:active {
   color: black;
   text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
