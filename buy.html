@@ -66,7 +66,13 @@
 		  <button type="button" class="collapsible">Categories</button>
 		  <div class="content">
 			<p>Toys</p>
+			<p>Motors</p>
 			<p>Electronics</p>
+			<p>Collectibles</p>
+			<p>Home & Garden</p>
+			<p>Fashion</p>
+			<p>Toys</p>
+			<p>Sporting Goods</p>
 		  </div>
 		  <button type="button" class="collapsible">Search Including</button>
 			  <div class="content">
@@ -82,10 +88,10 @@
 		  <button type="button" class="collapsible">Price</button>
 			  <div class="content">
 				<br>
-				  Show Items priced from <p id="rangeValue">0</p>
-				  <input type="range" id="min" value="0" placeholder="Min Price" min="0" max="50" oninput="rangeValue.innerText = this.value">
-				  to<p id="rangeValue">50</p>
-				  <input type="range" id="max" value="0" placeholder="Max Price" min="0" max="50" oninput="rangeValue.innerText = this.value">
+				  Show Items priced from <p id="minRangeValue">0</p>
+				  <input type="range" id="min" value="0" placeholder="Min Price" min="0" max="50" oninput="minRangeValue.innerText = this.value">
+				  to<p id="maxRangeValue">50</p>
+				  <input type="range" id="max" value="50" placeholder="Max Price" min="0" max="50" oninput="maxRangeValue.innerText = this.value">
 				  <br>
 				  
 		  </div>
