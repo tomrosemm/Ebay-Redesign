@@ -37,8 +37,7 @@
 	<div id="col-1">
 		<h2>Advance Search</h2>
 		  <div class="center">
-			<input type="button" value="Submit">
-			<input type="button" value="Reset">
+			<a href="search_results.html"><input type="button" value="Submit"></a>
 			<br><br>
 			<label for="searchbar">Search Term or Item #: </label>
 			<input type="text" id="searchbar" name="searchbar">
@@ -50,7 +49,7 @@
 				<label for="Keywords or Item Numbers: ">Keywords or Item Numbers: </label><br>
 				<input type="text" id="Keywords or Item Numbers: " name="Keywords or Item Numbers: "><br><br>
 
-			<label for="Keyword Options">Keyword Options: </label>
+			<label for="Keyword Options">Keyword Options: </label><br>
 				<select name="All Words, Any Order" id="All Words, Any Order">
 					<option value="All Words, Any Order">All Words, Any Order</option>
 					<option value="Any Words, Any Order">Any Words, Any Order</option>
@@ -61,18 +60,24 @@
 				<form action="">
 					<label for="Exclude Words: ">Exclude Words: </label><br>
 					<input type="text" id="Exclude Words: " name="Exclude Words: "><br>
-				  </form> <br>
+				  </form> 
 		  </div>
 		  <button type="button" class="collapsible">Categories</button>
 		  <div class="content">
-			<p>Toys</p>
-			<p>Motors</p>
-			<p>Electronics</p>
-			<p>Collectibles</p>
-			<p>Home & Garden</p>
-			<p>Fashion</p>
-			<p>Toys</p>
-			<p>Sporting Goods</p>
+			<input type="radio" id="Toys" value="Toys" name="Category Radio">
+			<label for="Toys">Toys</label><br>
+			<input type="radio" id="Motors" value="Motors" name="Category Radio">
+			<label for="Motors">Motors</label><br>
+			<input type="radio" id="Electronics" value="Electronics" name="Category Radio">
+			<label for="Electronics">Electronics</label><br>
+			<input type="radio" id="Collectibles" value="Collectibles" name="Category Radio">
+			<label for="Collectibles">Collectibles</label><br>
+			<input type="radio" id="Home & Garden" value="Home & Garden" name="Category Radio">
+			<label for="Home & Garden">Home & Garden</label><br>
+			<input type="radio" id="Fashion" value="Fashion" name="Category Radio">
+			<label for="Fashion">Fashion</label><br>
+			<input type="radio" id="Sporting Goods" value="Sporting Goods" name="Category Radio">
+			<label for="Sporting Goods">Sporting Goods</label><br>
 		  </div>
 		  <button type="button" class="collapsible">Search Including</button>
 			  <div class="content">
@@ -87,7 +92,6 @@
 		  </div>
 		  <button type="button" class="collapsible">Price</button>
 			  <div class="content">
-				<br>
 				  Show Items priced from <p id="minRangeValue">0</p>
 				  <input type="range" id="min" value="0" placeholder="Min Price" min="0" max="50" oninput="minRangeValue.innerText = this.value">
 				  to<p id="maxRangeValue">50</p>
@@ -104,13 +108,13 @@
 		  </div>
 		  <button type="button" class="collapsible">Condition</button>
 			  <div class="content">
-				  <input type="radio" id="New" value="New">
+				  <input type="radio" id="New" value="New" name="Condition Radio">
 				  <label for="New">New</label> <br>
 				  
-				  <input type="radio" id="Used" value="Used">
+				  <input type="radio" id="Used" value="Used" name="Condition Radio">
 				  <label for="Used">Used</label> <br>
 
-				  <input type="radio" id="Not Specified" value="Not Specified">
+				  <input type="radio" id="Not Specified" value="Not Specified" name="Condition Radio">
 				  <label for="Not Specified">Not Specified</label> <br>
 
 		  </div>
@@ -249,11 +253,11 @@
 						  <input type="text" id="Specific Seller (ID)" name="Specific Seller (ID)"><br>
 						</form>
 
-				  <input type="radio" id="Sellers with Ebay Stores " value="Sellers with Ebay Stores ">
+				  <input type="radio" id="Sellers with Ebay Stores " value="Sellers with Ebay Stores" name="Seller Radio">
 				  <label for="Sellers with Ebay Stores ">Sellers with Ebay Stores </label>
 				  <br>
 				  
-				  <input type="radio" id="My Saved Sellers List" value="My Saved Sellers List">
+				  <input type="radio" id="My Saved Sellers List" value="My Saved Sellers List" name="Seller Radio">
 				  <label for="My Saved Sellers List">My Saved Sellers List</label> <br>
 		  </div>
 		  <button type="button" class="collapsible">Results</button>
@@ -288,35 +292,43 @@
 		  <br>
 		  <br>
 		  <div class="center">
-			  <input type="button" value="Submit">
-			  <input type="button" value="Reset">
+			<a href="search_results.html">
+			  <input type="button" value="Submit"></a>
 		  </div>
 		  <br>
   </div>
 	
-	<div id="col-2">
-		<div class="logo">
-        	<a href="index.html">
-            	<span style="color: red;">E</span><span style="color: blue;">b</span><span style="color: yellow;">a</span><span style="color: green;">y</span>
-			</a>
-		</div>
-		<a href="categories.html">
-		<input type="button" value="Categories" style="cursor: pointer;"></a>
-            <input type="search" id="site-search" name="q">
-            <button>Search</button>
-            <br>
-            <br>
-			<div class="center">
-				<a href="help.html"><input type="button" value="Help" style="height:50px; width:100px; cursor: pointer;"></a>
-				<a href="buy.html"><input type="button" value="Buy" style="height:50px; width:100px;  cursor: pointer;"></a>
-				<a href="sell.html"><input type="button" value="Sell" style="height:50px; width:100px;  cursor: pointer;"></a>
-				<input type="button" value="Account" style="height:50px; width:100px">
-			</div>
-			<br>
-		<div id="body_content">
-			<h2>Home</h2>
-		</div>
+  <div id="col-2">
+	<div class="logo">
+		<a href="index.html">
+			<span style="color: red;">E</span><span style="color: blue;">b</span><span style="color: yellow;">a</span><span style="color: green;">y</span>
+		</a>
 	</div>
+	<a href="categories.html">
+	<input type="button" value="Categories" style="cursor: pointer;"></a>
+		<input type="search" id="site-search" name="q">
+		<a href="search_results.html"><button>Search</button></a>
+		<br>
+		<br>
+		<div class="center">
+			<a href="help.html"><input type="button" value="Help" style="height:50px; width:100px; cursor: pointer;"></a>
+			<a href="buy.html"><input type="button" value="Buy" style="height:50px; width:100px;  cursor: pointer;"></a>
+			<a href="sell.html"><input type="button" value="Sell" style="height:50px; width:100px;  cursor: pointer;"></a>
+
+			<!--<input type="button" value="Account" style="height:50px; width:100px"> -->
+			<select name="Account" id="Account" style="height:50px; width:100px; cursor: pointer; text-align: center;">
+				<option>Account</option>
+				<option>Change Username</option>
+				<option>Change Addresses</option>
+				<option>Settings</option>
+				<option>My Ebay</option>
+			</select>
+		</div>
+		<br>
+	<div id="body_content">
+		<h2>Home</h2>
+	</div>
+</div>
 	
 <script src="js_1.js"></script>
 </body>
