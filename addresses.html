@@ -21,10 +21,30 @@
 		  text-align: center;
 		}
 		
-		#body_content {
+        .address {
+            margin-bottom: 20px;
+			align-items: center;
+            justify-content: center;
 			
-		}
-		
+        }
+        .addressBox {
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+			width: fit-content; 
+			margin: auto;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var radios = document.getElementsByName('currentAddress');
+            for (var i = 0; i < radios.length; i++) {
+                radios[i].onclick = function() {
+                    document.getElementById('currentAddress').innerText = this.nextElementSibling.innerText;
+                }
+            }
+        }
+    </script>
 		
 	</style>
     
@@ -40,9 +60,19 @@
 			<span style="color: red;">E</span><span style="color: blue;">b</span><span style="color: yellow;">a</span><span style="color: green;">y</span>
 		</a>
 	</div>
-	<a href="categories.html">
-	<input type="button" value="Categories" style="cursor: pointer;"></a>
-		<input type="search" id="site-search" name="q">
+	<!-- This is the Category Dropdown Button-->
+	<select id="mySelect" onchange="goToPage2()">
+		<option value="Categories">Categories</option>
+		<option value="Motors">Motors</option>
+		<option value="Electronics">Electronics</option>
+		<option value="Collectibles">Collectibles</option>
+		<option value="Home & Garden">Home & Garden</option>
+		<option value="Fashion">Fashion</option>
+		<option value="Sporting Goods">Sporting Goods</option>
+	</select>
+	
+	<!--Category Dropdown Button Ends Here-->
+	<input type="search" id="site-search" name="q">
 		<a href="search_results.html"><button>Search</button></a>
 		<br>
 		<br>
@@ -59,19 +89,54 @@
 				  <a href="not_yet_implemented.html">My Ebay</a>
 				</div>
 			  </div>
-			<!--<input type="button" value="Account" style="height:50px; width:100px"> 
-			<select name="Account" id="Account" style="height:50px; width:100px; cursor: pointer; text-align: center;">
-				<option>Account</option>
-				<option>Change Username</option>
-				<option>Change Addresses</option>
-				<option>Settings</option>
-				<option>My Ebay</option>
-			</select> -->
+
 		</div>
 		<br>
 	<div id="body_content">
-		<h2>Home</h2>
+		<h1>Shipping Addresses</h1>
 	</div>
+
+	<div class="address">
+        <h3>Current Shipping Address:</h3> 
+		<p id="currentAddress">123 Main St, Anytown, USA</p> <!-- Replace with actual address -->
+    </div>
+
+    <div class="address">
+        <h3>Add New Address: </h3>
+        <form id="addAddressForm">
+            <textarea id="newAddress" rows="2" cols="50"></textarea><br>
+            <input type="submit" value="Add Address">
+        </form>
+    </div>
+
+    <div class="address">
+        <h3>Saved Addresses: </h3>
+        <div class="addressBox">
+            <input type="radio" name="currentAddress">
+            <span>456 Maple Ave, Somewhere, USA</span>
+            <button>Remove</button>
+        </div>
+        <div class="addressBox">
+            <input type="radio" name="currentAddress">
+            <span>789 Oak St, Elsewhere, USA</span>
+            <button>Remove</button>
+        </div>
+		<div class="addressBox">
+            <input type="radio" name="currentAddress">
+            <span>789 Oak St, Elsewhere, USA</span>
+            <button>Remove</button>
+        </div>
+		<div class="addressBox">
+            <input type="radio" name="currentAddress">
+            <span>1948 Buick Blv, Elsewhere, USA</span>
+            <button>Remove</button>
+        </div>
+		<div class="addressBox">
+            <input type="radio" name="currentAddress">
+            <span>1290 CheryWood St, Elsewhere, USA</span>
+            <button>Remove</button>
+        </div>
+    </div>
 </div>
 	
 <script src="js_1.js"></script>
