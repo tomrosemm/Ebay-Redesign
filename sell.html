@@ -30,7 +30,7 @@
     
 	<link href="css1.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8">
-	<title>Ebay Home</title>
+	<title>Sell</title>
 </head>
 
 <body>	
@@ -40,8 +40,18 @@
 			<span style="color: red;">E</span><span style="color: blue;">b</span><span style="color: yellow;">a</span><span style="color: green;">y</span>
 		</a>
 	</div>
-	<a href="categories.html">
-	<input type="button" value="Categories" style="cursor: pointer;"></a>
+			<!-- This is the Category Dropdown Button-->
+			<select id="mySelect" onchange="goToPage2()">
+				<option value="">Categories</option>
+				<option value="Motors">Motors</option>
+				<option value="Electronics">Electronics</option>
+				<option value="Collectibles">Collectibles</option>
+				<option value="Home & Garden">Home & Garden</option>
+				<option value="Fashion">Fashion</option>
+				<option value="Sporting Goods">Sporting Goods</option>
+			</select>
+			
+			<!--Category Dropdown Button Ends Here-->
 		<input type="search" id="site-search" name="q">
 		<a href="search_results.html"><button>Search</button></a>
 		<br>
@@ -59,18 +69,100 @@
 				  <a href="not_yet_implemented.html">My Ebay</a>
 				</div>
 			  </div>
-			<!--<input type="button" value="Account" style="height:50px; width:100px"> 
-			<select name="Account" id="Account" style="height:50px; width:100px; cursor: pointer; text-align: center;">
-				<option>Account</option>
-				<option>Change Username</option>
-				<option>Change Addresses</option>
-				<option>Settings</option>
-				<option>My Ebay</option>
-			</select> -->
+
 		</div>
 		<br>
 	<div id="body_content">
-		<h2>Home</h2>
+		<h2>Sell Page</h2>
+		<br><br>
+		<a href="new_listing.html"><input type="button" value="Sell an Item" style="cursor: pointer; width: 200px; height: 75px;"></a><br><br>
+		<h3 style="font-size: 23px;">Selling <a href="active_items.html">Overview</a></h3>
+		<hr color="black" width="50%"><br>
+		<div class="sale_items">
+			<div class="single_sale_item">
+				<img src="placeholder.png">
+				<p>[Name of Item]</p>
+				<p>[Price]</p>
+				<p>[Time Remaining]</p>
+				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
+				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+
+			</div>
+			<div class="single_sale_item">
+				<img src="placeholder.png">
+				<p>[Name of Item]</p>
+				<p>[Price]</p>
+				<p>[Time Remaining]</p>
+				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
+				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+			</div>
+			<div class="single_sale_item">
+				<img src="placeholder.png">
+				<p>[Name of Item]</p>
+				<p>[Price]</p>
+				<p>[Time Remaining]</p>
+				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
+				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+			</div>
+			<div class="single_sale_item">
+				<img src="placeholder.png">
+				<p>[Name of Item]</p>
+				<p>[Price]</p>
+				<p>[Time Remaining]</p>
+				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
+				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+			</div>
+			<div class="single_sale_item">
+				<img src="placeholder.png">
+				<p>[Name of Item]</p>
+				<p>[Price]</p>
+				<p>[Time Remaining]</p>
+				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
+				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+			</div><br><br><br>
+			<div class="single_sale_item">
+				<img src="placeholder.png">
+				<p>[Name of Item]</p>
+				<p>[Price]</p>
+				<p>[Time Remaining]</p>
+				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
+				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+
+			</div>
+			<div class="single_sale_item">
+				<img src="placeholder.png">
+				<p>[Name of Item]</p>
+				<p>[Price]</p>
+				<p>[Time Remaining]</p>
+				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
+				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+			</div>
+			<div class="single_sale_item">
+				<img src="placeholder.png">
+				<p>[Name of Item]</p>
+				<p>[Price]</p>
+				<p>[Time Remaining]</p>
+				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
+				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+			</div>
+			<div class="single_sale_item">
+				<img src="placeholder.png">
+				<p>[Name of Item]</p>
+				<p>[Price]</p>
+				<p>[Time Remaining]</p>
+				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
+				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+			</div>
+			<div class="single_sale_item">
+				<img src="placeholder.png">
+				<p>[Name of Item]</p>
+				<p>[Price]</p>
+				<p>[Time Remaining]</p>
+				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
+				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+			</div>
+		</div>
+		<br>
 	</div>
 </div>
 	

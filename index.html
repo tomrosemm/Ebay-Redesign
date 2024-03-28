@@ -21,9 +21,6 @@
 		  text-align: center;
 		}
 		
-		#body_content {
-			
-		}
 		
 		
 	</style>
@@ -304,9 +301,18 @@
 			<span style="color: red;">E</span><span style="color: blue;">b</span><span style="color: yellow;">a</span><span style="color: green;">y</span>
 		</a>
 	</div>
-	<a href="categories.html">
-	<input type="button" value="Categories" style="cursor: pointer;"></a>
-		<input type="search" id="site-search" name="q">
+
+	<select id="mySelect" onchange="goToPage2()">
+		<option value="Categories">Categories</option>
+		<option value="Motors">Motors</option>
+		<option value="Electronics">Electronics</option>
+		<option value="Collectibles">Collectibles</option>
+		<option value="Home & Garden">Home & Garden</option>
+		<option value="Fashion">Fashion</option>
+		<option value="Sporting Goods">Sporting Goods</option>
+	</select>
+
+	<input type="search" id="site-search" name="q">
 		<a href="search_results.html"><button>Search</button></a>
 		<br>
 		<br>
@@ -317,25 +323,41 @@
 			<div class="dropdown">
 				<button class="dropbtn">Account</button>
 				<div class="dropdown-content">
-				  <a href="not_yet_implemented.html">Change Username</a>
-				  <a href="addresses.html">Change Addresses</a>
-				  <a href="account_settings.html">Settings</a>
-				  <a href="not_yet_implemented.html">My Ebay</a>
+					<a href="not_yet_implemented.html">Change Username</a>
+					<a href="addresses.html">Change Addresses</a>
+					<a href="account_settings.html">Settings</a>
+					<a href="not_yet_implemented.html">My Ebay</a>
 				</div>
-			  </div>
-			<!--<input type="button" value="Account" style="height:50px; width:100px"> 
-			<select name="Account" id="Account" style="height:50px; width:100px; cursor: pointer; text-align: center;">
-				<option>Account</option>
-				<option>Change Username</option>
-				<option>Change Addresses</option>
-				<option>Settings</option>
-				<option>My Ebay</option>
-			</select> -->
+			</div>
 		</div>
 		<br>
 	<div id="body_content">
 		<h2>Home</h2>
+		<br>
+		<h2 class="headings">Top Deals</h2>
+		<br>
 	</div>
+		<a href="item_listing_customer.html"><img src="placeholder.png" class="home-images"></a>
+		<a href="item_listing_customer.html"><img src="placeholder.png" class="home-images"></a>
+		<a href="item_listing_customer.html"><img src="placeholder.png" class="home-images"></a>
+		<a href="item_listing_customer.html"><img src="placeholder.png" class="home-images"></a>
+		<a href="item_listing_customer.html"><img src="placeholder.png" class="home-images"></a>
+	<div>
+		<br>
+		<h2 class="headings">My Listings</h2>
+		<br>
+	</div>
+	<a href="item_listing_customer.html"><img src="placeholder.png" class="home-images"></a>
+	<a href="item_listing_customer.html"><img src="placeholder.png" class="home-images"></a>
+	<a href="item_listing_customer.html"><img src="placeholder.png" class="home-images"></a>
+	<a href="item_listing_customer.html"><img src="placeholder.png" class="home-images"></a>
+	<a href="item_listing_customer.html"><img src="placeholder.png" class="home-images"></a>
+<div>
+
+	</div>
+
+
+</body>
 </div>
 	
 <script src="js_1.js"></script>

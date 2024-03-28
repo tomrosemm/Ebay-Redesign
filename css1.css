@@ -47,10 +47,14 @@
 
 h1 {
 	text-align: center
-   }
+}
 
 h2 {
 	text-align: center;
+}
+
+h3 {
+  text-align: center;
 }
 
 button {
@@ -127,3 +131,141 @@ a:active {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.home-images {
+  display: inline-block;
+}
+
+
+.headings {
+  text-align: left;
+  padding-left: 6%;
+}
+
+.similar-text {
+  text-align: left;
+  padding-left: 25%;
+}
+.similar-items {
+  display:flex;
+  flex-direction: column;
+  padding: 1%;
+  margin-left: 300px;
+}
+
+div.test {
+  width:auto;
+  margin: auto;
+  margin-left: 30px;
+  }
+  
+  div.block {
+  float: left;
+  }
+  
+  div.block a{
+  display:inline-block; 
+  margin-left: 15px;
+  }
+  
+
+ .text-right {
+  display:flex;
+  flex-direction: row;
+ }
+
+ .wrapper-main {
+  width:1000px;
+  margin: 0 auto;
+ }
+
+ .item-desc-flex {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  column-gap: 60px;
+ }
+
+ .buttons {
+  position:relative;
+  bottom: -112px;
+  left: -350px;
+  display:inline;
+  margin:auto;
+  display:flex;
+  flex-direction: row;
+ }
+
+ .button-listing {
+  margin-right: 5%;
+ }
+
+div.scroll-container {
+  margin: auto;
+  width: 50%;
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  margin: auto;
+  width: 50%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.review {
+  margin: auto;
+  height:50px;
+  width: 50%;
+  border-width: 3px;
+  border-color: black;
+  border-style: solid;
+}
+
+.sale_items {
+  margin: auto;
+  width: 75%;
+}
+
+.single_sale_item {
+  display: inline-block;
+  padding: 20px;
+}

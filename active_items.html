@@ -21,16 +21,50 @@
 		  text-align: center;
 		}
 		
-		#body_content {
+		.flexGroup {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 			
-		}
-		
+        }
+
+        .flexElement {
+            margin: 10px;
+			
+        }
+
+        .imageContainer {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+			right: -400px; /* Adjust this value to move the description */
+        }
+        .imageText {
+            position: absolute;
+            right: -525px; /* Adjust this value to move the description left or right */
+			bottom: 225px; /* Adjust this value to move the description up or down */
+        }
+        .imageButton {
+            position: absolute;
+            bottom: -300;
+            right: -175px; /* Adjust this value to move the button */
+			
+    	}
+        	
+        .topContainer {
+            display: center;
+            justify-content: space-between;
+            width: 100%; /* Adjust this value to control the space between the dropdown and the button */
+            margin-bottom: 20px; /* Adjust this value to control the space between this container and the items below it */
+			
+        }
 		
 	</style>
     
 	<link href="css1.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8">
-	<title>Ebay Home</title>
+	<title>Ebay Active Items</title>
 </head>
 
 <body>	
@@ -40,9 +74,20 @@
 			<span style="color: red;">E</span><span style="color: blue;">b</span><span style="color: yellow;">a</span><span style="color: green;">y</span>
 		</a>
 	</div>
-	<a href="categories.html">
-	<input type="button" value="Categories" style="cursor: pointer;"></a>
-		<input type="search" id="site-search" name="q">
+	<!-- This is the Category Dropdown Button-->
+	<select id="mySelect" onchange="goToPage2()">
+		<option value="Categories">Categories</option>
+		<option value="Motors">Motors</option>
+		<option value="Electronics">Electronics</option>
+		<option value="Collectibles">Collectibles</option>
+		<option value="Home & Garden">Home & Garden</option>
+		<option value="Fashion">Fashion</option>
+		<option value="Sporting Goods">Sporting Goods</option>
+	</select>
+	
+
+	<!--Category Dropdown Button Ends Here-->
+	<input type="search" id="site-search" name="q">
 		<a href="search_results.html"><button>Search</button></a>
 		<br>
 		<br>
@@ -59,19 +104,66 @@
 				  <a href="not_yet_implemented.html">My Ebay</a>
 				</div>
 			  </div>
-			<!--<input type="button" value="Account" style="height:50px; width:100px"> 
-			<select name="Account" id="Account" style="height:50px; width:100px; cursor: pointer; text-align: center;">
-				<option>Account</option>
-				<option>Change Username</option>
-				<option>Change Addresses</option>
-				<option>Settings</option>
-				<option>My Ebay</option>
-			</select> -->
+
 		</div>
 		<br>
 	<div id="body_content">
-		<h2>Home</h2>
+		<h1>Active Items Overview</h1>
 	</div>
+
+
+	<div class="topContainer">
+        <select onchange="location = this.value;" style="width: 150px; height: 50px; font-size: 20px;">
+			<option value="#">Overview</option>
+			<option value="active_items.html">Active</option>
+			<option value="sold_items.html">Sold</option>
+        </select>
+        <button onclick="location.href='new_listing.html'" style="width: 150px; height: 50px; font-size: 20px;">New Listing</button>
+    </div>
+
+	<div class="flexGroup">
+        <div class="imageContainer">
+            <a href="item_listing_seller.html"><img src="Item Sold.jpg" alt="Image" width="200"></a>
+            <div class="imageText">
+                <p>The listed Item, it's current status (Including bid), and how much time is left</p>
+            </div>
+            <div class="imageButton">
+                <button onclick="location.href='revise_listing.html'" style="width: 150px; height: 50px; font-size: 20px;";>Revise</button>
+            </div>
+        </div>
+		<h3 style="visibility: hidden;">Placeholder Header</h3>
+		<div class="imageContainer">
+            <a href="item_listing_seller.html"><img src="Item Sold.jpg" alt="Image" width="200"></a>
+            <div class="imageText">
+                <p>The listed Item, it's current status (Including bid), and how much time is left</p>
+            </div>
+            <div class="imageButton">
+                <button onclick="location.href='revise_listing.html'" style="width: 150px; height: 50px; font-size: 20px;";>Revise</button>
+            </div>
+        </div>
+		<h3 style="visibility: hidden;">Placeholder Header</h3>
+		<div class="imageContainer">
+            <a href="item_listing_seller.html"><img src="Item Sold.jpg" alt="Image" width="200"></a>
+            <div class="imageText">
+                <p>The listed Item, it's current status (Including bid), and how much time is left</p>
+            </div>
+            <div class="imageButton">
+                <button onclick="location.href='revise_listing.html'" style="width: 150px; height: 50px; font-size: 20px;";>Revise</button>
+            </div>
+        </div>
+		<h3 style="visibility: hidden;">Placeholder Header</h3>
+		<div class="imageContainer">
+			<a href="item_listing_seller.html"><img src="Item Sold.jpg" alt="Image" width="200"></a>
+            <div class="imageText">
+                <p>The listed Item, it's current status (Including bid), and how much time is left</p>
+            </div>
+            <div class="imageButton">
+				<button onclick="location.href='revise_listing.html'" style="width: 150px; height: 50px; font-size: 20px;";>Revise</button>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 	
 <script src="js_1.js"></script>
