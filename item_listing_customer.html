@@ -21,9 +21,20 @@
 		  text-align: center;
 		}
 		
-		#body_content {
-			
-		}
+		.container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .image-container {
+            margin: 10px;
+            text-align: center;
+            max-width: 200px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 		
 		
 	</style>
@@ -304,9 +315,35 @@
 			<span style="color: red;">E</span><span style="color: blue;">b</span><span style="color: yellow;">a</span><span style="color: green;">y</span>
 		</a>
 	</div>
-	<a href="categories.html">
-	<input type="button" value="Categories" style="cursor: pointer;"></a>
-		<input type="search" id="site-search" name="q">
+	<!-- This is the Category Dropdown Button-->
+	<select id="mySelect" onchange="goToPage2()">
+		<option value="Categories">Categories</option>
+		<option value="Motors">Motors</option>
+		<option value="Electronics">Electronics</option>
+		<option value="Collectibles">Collectibles</option>
+		<option value="Home & Garden">Home & Garden</option>
+		<option value="Fashion">Fashion</option>
+		<option value="Sporting Goods">Sporting Goods</option>
+	</select>
+	
+	<script>
+		function goToPage2() {
+			// Get the selected option
+			var selectElement = document.getElementById("mySelect");
+			var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+	
+			// If an option is selected (not the placeholder), store it and go to Page 2
+			if (selectedOption) {
+				// Store the selected option in local storage
+				localStorage.setItem("selectedOption", selectedOption);
+	
+				// Redirect
+				window.location.href = "categories.html";
+			}
+		}
+	</script>
+	<!--Category Dropdown Button Ends Here-->
+	<input type="search" id="site-search" name="q">
 		<a href="search_results.html"><button>Search</button></a>
 		<br>
 		<br>
@@ -323,20 +360,79 @@
 				  <a href="not_yet_implemented.html">My Ebay</a>
 				</div>
 			  </div>
-			<!--<input type="button" value="Account" style="height:50px; width:100px"> 
-			<select name="Account" id="Account" style="height:50px; width:100px; cursor: pointer; text-align: center;">
-				<option>Account</option>
-				<option>Change Username</option>
-				<option>Change Addresses</option>
-				<option>Settings</option>
-				<option>My Ebay</option>
-			</select> -->
 		</div>
 		<br>
 	<div id="body_content">
-		<h2>Home</h2>
+		<h2>Item Listing - Customer View</h2>
 	</div>
-</div>
+	<br>
+	<br>
+	<br>
+	<div class="test">
+		<div class="wrapper-main item-desc-flex">
+			<img src="https://placehold.jp/150x150.png" style="width:300px;height:300px;">
+			<span>Item Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, voluptatibus dolorem? Animi laborum officiis reiciendis tempore exercitationem ducimus corporis in voluptas ea quod quae alias, aut quisquam officia saepe quia!
+				
+			</span>
+			<div class="buttons">
+				<input type="button"  class="button-listing" id="Buy/Bid" value="Buy/Bid" style="width:150px;height:75px; cursor: pointer;">
+				<a href="seller_profile.html"><input type="button" value="Contact Seller" style="width:150px;height:75px;  cursor: pointer;"></a>
+			</div>
+
+			</div>
+			<div class="block wrapper-main item-desc-flex">
+			<p>Name  $</p>
+			<p>Seller Rating</p>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			</div>
+	</div>
+	</div>
+
+
+	
+	<div>
+		<h2 class="similar-text ">Similar Items</h2>
+		<br>
+	</div>
+	<div class="test ">
+		<div class="block similar-item-indent">
+		<a href="item_listing_customer.html"><img src="https://placehold.jp/150x150.png" class="home-images">
+	</div>
+		<div class="block">
+		<a href="item_listing_customer.html"><img src="https://placehold.jp/150x150.png" class="home-images">
+	</div>
+		<div class="block">
+			<a href="item_listing_customer.html"><img src="https://placehold.jp/150x150.png" class="home-images">
+		</div>
+	<div class="block">
+		<a href="item_listing_customer.html"><img src="https://placehold.jp/150x150.png" class="home-images">
+	</div>
+	<div class="block">
+		<a href="item_listing_customer.html"><img src="https://placehold.jp/150x150.png" class="home-images">
+	</div>
+	<br>
+	<br>
+	</div>
+
+	<div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h2 class="similar-text">Reviews</h2>
+		<input  class="text-review similar-item-indent" type="text-box" placeholder="Review of Item" style="text-align:justify;" id="review">
+	</div> 
+
+
 	
 <script src="js_1.js"></script>
 </body>

@@ -153,6 +153,12 @@ a:active {
   margin-left: 300px;
 }
 
+.test {
+  width:auto;
+  margin: auto;
+  margin-left: 30px;
+  }
+
 div.test {
   width:auto;
   margin: auto;
@@ -269,3 +275,29 @@ div.scroll-container img {
   display: inline-block;
   padding: 20px;
 }
+
+.text-review {
+  display: inline-block;
+  text-align: left;
+  margin: 0% 0% 20% 21%;
+  width: 500px;
+  height: 50px;
+ }
+
+ .similar-item-indent {
+  margin-left: 22%;
+}
+
+.blocks {
+display: block;
+}
+
+.centered {
+  max-width: fit-content;
+  margin-left: 16%;
+ }
+
+
+ .button-seller {
+  margin-right: 20%;
+ }

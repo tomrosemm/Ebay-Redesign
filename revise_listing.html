@@ -21,16 +21,14 @@
 		  text-align: center;
 		}
 		
-		#body_content {
-			
-		}
+		
 		
 		
 	</style>
     
 	<link href="css1.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8">
-	<title>Revise Listing</title>
+	<title>Ebay Home</title>
 </head>
 
 <body>	
@@ -40,20 +38,35 @@
 			<span style="color: red;">E</span><span style="color: blue;">b</span><span style="color: yellow;">a</span><span style="color: green;">y</span>
 		</a>
 	</div>
-			<!-- This is the Category Dropdown Button-->
-			<select id="mySelect" onchange="goToPage2()">
-				<option value="">Categories</option>
-				<option value="Motors">Motors</option>
-				<option value="Electronics">Electronics</option>
-				<option value="Collectibles">Collectibles</option>
-				<option value="Home & Garden">Home & Garden</option>
-				<option value="Fashion">Fashion</option>
-				<option value="Sporting Goods">Sporting Goods</option>
-			</select>
-			
-			<!--Category Dropdown Button Ends Here-->
-
-		<input type="search" id="site-search" name="q">
+	<!-- This is the Category Dropdown Button-->
+	<select id="mySelect" onchange="goToPage2()">
+		<option value="Categories">Categories</option>
+		<option value="Motors">Motors</option>
+		<option value="Electronics">Electronics</option>
+		<option value="Collectibles">Collectibles</option>
+		<option value="Home & Garden">Home & Garden</option>
+		<option value="Fashion">Fashion</option>
+		<option value="Sporting Goods">Sporting Goods</option>
+	</select>
+	
+	<script>
+		function goToPage2() {
+			// Get the selected option
+			var selectElement = document.getElementById("mySelect");
+			var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+	
+			// If an option is selected (not the placeholder), store it and go to Page 2
+			if (selectedOption) {
+				// Store the selected option in local storage
+				localStorage.setItem("selectedOption", selectedOption);
+	
+				// Redirect
+				window.location.href = "categories.html";
+			}
+		}
+	</script>
+	<!--Category Dropdown Button Ends Here-->
+	<input type="search" id="site-search" name="q">
 		<a href="search_results.html"><button>Search</button></a>
 		<br>
 		<br>
@@ -70,46 +83,19 @@
 				  <a href="not_yet_implemented.html">My Ebay</a>
 				</div>
 			  </div>
-
+			<!--<input type="button" value="Account" style="height:50px; width:100px"> 
+			<select name="Account" id="Account" style="height:50px; width:100px; cursor: pointer; text-align: center;">
+				<option>Account</option>
+				<option>Change Username</option>
+				<option>Change Addresses</option>
+				<option>Settings</option>
+				<option>My Ebay</option>
+			</select> -->
 		</div>
 		<br>
-		<div id="body_content">
-			<h2>Revise Listing</h2>
-			<h3>Item Picture</h3>
-			<img src="placeholder.png"><br>
-			<p>[Current Listing Title]</p>
-			<h3>Sale Type</h3>
-			<input style="height: 20px; width: 20px;" type="checkbox" id="buy_now" name="buy_now" value="Buy Now">
-			<label style="font-size: 20px;" for="buy_now" >Buy Now</label><br>
-			<ul>
-				<li>Amount: <input type="text" size="5"></li>
-			</ul>
-			<input style="height: 20px; width: 20px;" type="checkbox" id="auction" name="auction" value="Auction">
-			<label style="font-size: 20px;" for="auction">Auction</label><br>
-			<ul>
-				<li>Amount: <input type="text" size="5"></li>
-			</ul>
-			<h3>Condition</h3>
-			<input style="height: 20px; width: 20px;" type="checkbox" id="specify_contition" name="specify_condition" value="Specify Condition">
-			<label style="font-size: 20px;" for="specify_condition">Specify Condition</label><br>
-			<input type="radio" id="new" name="condition_option" value="new">
-			<label for="new">New</label><br>
-			<input type="radio" id="like_new" name="condition_option" value="like_new">
-			<label for="like_new">Like New</label><br>
-			<input type="radio" id="used" name="condition_option" value="used">
-			<label for="used">Used</label><br>
-			<input type="radio" id="poor_quality" name="condition_option" value="poor_quality">
-			<label for="poor_quality">Poor Quality</label><br>
-			<br>
-			<label for="description">Item Description: </label><br><br>
-			<textarea style="resize: none;" id="description" name="description" rows="4" cols="50">[Current Description]
-			</textarea>
-			<br><br>
-			<a href="sell.html"><input type="button" value="Confirm"></a>
-			<input type="button" value="Delete">
-			<br><br>
-	
-		</div>
+	<div id="body_content">
+		<h2>Home</h2>
+	</div>
 </div>
 	
 <script src="js_1.js"></script>

@@ -21,9 +21,21 @@
 		  text-align: center;
 		}
 		
-		#body_content {
-			
-		}
+		.container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .image-container {
+            margin: 10px;
+            text-align: center;
+            max-width: 200px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+		
 		
 		
 	</style>
@@ -304,9 +316,35 @@
 			<span style="color: red;">E</span><span style="color: blue;">b</span><span style="color: yellow;">a</span><span style="color: green;">y</span>
 		</a>
 	</div>
-	<a href="categories.html">
-	<input type="button" value="Categories" style="cursor: pointer;"></a>
-		<input type="search" id="site-search" name="q">
+	<!-- This is the Category Dropdown Button-->
+	<select id="mySelect" onchange="goToPage2()">
+		<option value="Categories">Categories</option>
+		<option value="Motors">Motors</option>
+		<option value="Electronics">Electronics</option>
+		<option value="Collectibles">Collectibles</option>
+		<option value="Home & Garden">Home & Garden</option>
+		<option value="Fashion">Fashion</option>
+		<option value="Sporting Goods">Sporting Goods</option>
+	</select>
+	
+	<script>
+		function goToPage2() {
+			// Get the selected option
+			var selectElement = document.getElementById("mySelect");
+			var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+	
+			// If an option is selected (not the placeholder), store it and go to Page 2
+			if (selectedOption) {
+				// Store the selected option in local storage
+				localStorage.setItem("selectedOption", selectedOption);
+	
+				// Redirect
+				window.location.href = "categories.html";
+			}
+		}
+	</script>
+	<!--Category Dropdown Button Ends Here-->
+	<input type="search" id="site-search" name="q">
 		<a href="search_results.html"><button>Search</button></a>
 		<br>
 		<br>
@@ -323,19 +361,88 @@
 				  <a href="not_yet_implemented.html">My Ebay</a>
 				</div>
 			  </div>
-			<!--<input type="button" value="Account" style="height:50px; width:100px"> 
-			<select name="Account" id="Account" style="height:50px; width:100px; cursor: pointer; text-align: center;">
-				<option>Account</option>
-				<option>Change Username</option>
-				<option>Change Addresses</option>
-				<option>Settings</option>
-				<option>My Ebay</option>
-			</select> -->
 		</div>
 		<br>
 	<div id="body_content">
-		<h2>Home</h2>
+		<h2>Search Results</h2>
 	</div>
+
+	<div class="container">
+        <div class="image-container">
+			<h3 style="text-align: left;">Top Deals</h3>
+            <a href="item_listing_customer.html">
+                <img src="https://placehold.jp/150x150.png" alt="Image 1">
+                <p>Item Name, Desc and Price</p>
+            </a>
+        </div>
+        <div class="image-container">
+			<h3 style="visibility: hidden;">Placeholder Header</h3>
+            <a href="item_listing_customer.html">
+                <img src="https://placehold.jp/150x150.png" alt="Image 2">
+                <p>Item Name, Desc and Price</p>
+            </a>
+        </div>
+        <div class="image-container">
+			<h3 style="visibility: hidden;">Placeholder Header</h3>
+            <a href="item_listing_customer.html">
+                <img src="https://placehold.jp/150x150.png" alt="Image 3">
+                <p>Item Name, Desc and Price</p>
+            </a>
+        </div>
+		<div class="image-container">
+			<h3 style="visibility: hidden;">Placeholder Header</h3>
+            <a href="item_listing_customer.html">
+                <img src="https://placehold.jp/150x150.png" alt="Image 2">
+                <p>Item Name, Desc and Price</p>
+            </a>
+        </div>
+        <div class="image-container">
+			<h3 style="visibility: hidden;">Placeholder Header</h3>
+            <a href="item_listing_customer.html">
+                <img src="https://placehold.jp/150x150.png" alt="Image 3">
+                <p>Item Name, Desc and Price</p>
+            </a>
+        </div>
+    </div>
+
+	<div class="container">
+        <div class="image-container">
+			<h3 style="text-align: left;">Similar Items</h3>
+            <a href="item_listing_customer.html">
+                <img src="https://placehold.jp/150x150.png" alt="Image 1">
+                <p>Item Name, Desc and Price</p>
+            </a>
+        </div>
+        <div class="image-container">
+			<h3 style="visibility: hidden;">Placeholder Header</h3>
+            <a href="item_listing_customer.html">
+                <img src="https://placehold.jp/150x150.png" alt="Image 2">
+                <p>Item Name, Desc and Price</p>
+            </a>
+        </div>
+        <div class="image-container">
+			<h3 style="visibility: hidden;">Placeholder Header</h3>
+            <a href="item_listing_customer.html">
+                <img src="https://placehold.jp/150x150.png" alt="Image 3">
+                <p>Item Name, Desc and Price</p>
+            </a>
+        </div>
+		<div class="image-container">
+			<h3 style="visibility: hidden;">Placeholder Header</h3>
+            <a href="item_listing_customer.html">
+                <img src="https://placehold.jp/150x150.png" alt="Image 2">
+                <p>Item Name, Desc and Price</p>
+            </a>
+        </div>
+        <div class="image-container">
+			<h3 style="visibility: hidden;">Placeholder Header</h3>
+            <a href="item_listing_customer.html">
+                <img src="https://placehold.jp/150x150.png" alt="Image 3">
+                <p>Item Name, Desc and Price</p>
+            </a>
+        </div>
+    </div>
+
 </div>
 	
 <script src="js_1.js"></script>
