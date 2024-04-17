@@ -9,7 +9,8 @@
 		  float: left;
 		  height: 100%;
 		  z-index: 1010101010;
-
+		  outline-color: black;
+		  outline-style: inset;
 		}
 
 		#col-2 {
@@ -19,9 +20,23 @@
 		  height: 100%;
 		  z-index: 1010101010;
 		  text-align: center;
+
+		  .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .image-container {
+            margin: 10px;
+            text-align: center;
+            max-width: 200px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 		}
-		
-		
+
 		
 	</style>
     
@@ -63,8 +78,8 @@
 		  <div class="content">
 			<input type="radio" id="Toys" value="Toys" name="Category Radio">
 			<label for="Toys">Toys</label><br>
-			<input type="radio" id="Motors" value="Motors" name="Category Radio">
-			<label for="Motors">Motors</label><br>
+			<input type="radio" id="Vehicle Parts" value="Vehicle Parts" name="Category Radio">
+			<label for="Vehicle Parts">Vehicle Parts</label><br>
 			<input type="radio" id="Electronics" value="Electronics" name="Category Radio">
 			<label for="Electronics">Electronics</label><br>
 			<input type="radio" id="Collectibles" value="Collectibles" name="Category Radio">
@@ -304,7 +319,7 @@
 
 	<select id="mySelect" onchange="goToPage2()">
 		<option value="Categories">Categories</option>
-		<option value="Motors">Motors</option>
+		<option value="Vehicle Parts">Vehicle Parts</option>
 		<option value="Electronics">Electronics</option>
 		<option value="Collectibles">Collectibles</option>
 		<option value="Home & Garden">Home & Garden</option>
@@ -331,31 +346,109 @@
 			</div>
 		</div>
 		<br>
+
+
+		<div class="container">
+			<div class="image-container">
+				<h3 style="text-align: left;">Top Deals</h3>
+				<a href="item_listing_customer.html">
+					<img src="Plant.jpg" alt="Image 1" style="height:200px; width:200px;">
+					<p>House Plant     $45</p>
+				</a>
+			</div>
+			<div class="image-container">
+				<h3 style="visibility: hidden;">Placeholder Header</h3>
+				<a href="item_listing_customer.html">
+					<img src="WorkoutSet.jpg" alt="Image 2" style="height:200px; width:200px;">
+					<p>Dumbell Set     $35</p>
+				</a>
+			</div>
+			<div class="image-container">
+				<h3 style="visibility: hidden;">Placeholder Header</h3>
+				<a href="item_listing_customer.html">
+					<img src="TV.jpg" alt="Image 3" style="height:200px; width:200px;">
+					<p>Sylvania TV      $55</p>
+				</a>
+			</div>
+			<div class="image-container">
+				<h3 style="visibility: hidden;">Placeholder Header</h3>
+				<a href="item_listing_customer.html">
+					<img src="MRE.jpg" alt="Image 2" style="height:200px; width:200px;">
+					<p>Sealed MRE     $10</p>
+				</a>
+			</div>
+			<div class="image-container">
+				<h3 style="visibility: hidden;">Placeholder Header</h3>
+				<a href="item_listing_customer.html">
+					<img src="Book1.jpg" alt="Image 3" style="height:200px; width:200px;">
+					<p>Mythologies Book    $15</p>
+				</a>
+			</div>
+		</div>
+	
+		<div class="container">
+			<div class="image-container">
+				<h3 style="text-align: left;">More Items</h3>
+				<a href="item_listing_customer.html">
+					<img src="Laptop.jpg" alt="Image 1" style="height:200px; width:200px;">
+					<p>Dell Laptop    $139</p>
+				</a>
+			</div>
+			<div class="image-container">
+				<h3 style="visibility: hidden;">Placeholder Header</h3>
+				<a href="item_listing_customer.html">
+					<img src="Drill.jpg" alt="Image 2" style="height:200px; width:200px;">
+					<p>Milwaukee Drill     $30</p>
+				</a>
+			</div>
+			<div class="image-container">
+				<h3 style="visibility: hidden;">Placeholder Header</h3>
+				<a href="item_listing_customer.html">
+					<img src="Shoes.jpg" alt="Image 3" style="height:200px; width:200px;">
+					<p>Adidas Shoes    $60</p>
+				</a>
+			</div>
+			<div class="image-container">
+				<h3 style="visibility: hidden;">Placeholder Header</h3>
+				<a href="item_listing_customer.html">
+					<img src="Watch.png" alt="Image 2" style="height:200px; width:200px;">
+					<p>Zenith Chronomaster   $6,045</p>
+				</a>
+			</div>
+			<div class="image-container">
+				<h3 style="visibility: hidden;">Placeholder Header</h3>
+				<a href="item_listing_customer.html">
+					<img src="Item Sold.jpg" alt="Image 3" style="height:200px; width:200px;">
+					<p>Applied Chemistry Book  $50</p>
+				</a>
+			</div>
+		</div>
+
+		<!--
 	<div id="body_content">
 		<h2>Home</h2>
+		<br>
+		<h2 class="headings">Featured</h2>
+		<br>
+	</div>
+		<a href="item_listing_customer.html"><img src="Plant.jpg" class="home-images" style="height:200px; width:200px;"></a>
+		<a href="item_listing_customer.html"><img src="WorkoutSet.jpg" class="home-images" style="height:200px; width:200px;"></a>
+		<a href="item_listing_customer.html"><img src="TV.jpg" class="home-images" style="height:200px; width:200px;"></a>
+		<a href="item_listing_customer.html"><img src="MRE.jpg" class="home-images" style="height:200px; width:200px;"></a>
+		<a href="item_listing_customer.html"><img src="Book1.jpg" class="home-images" style="height:200px; width:200px;"></a>
+	<div>
 		<br>
 		<h2 class="headings">Top Deals</h2>
 		<br>
 	</div>
-		<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height:200px; width:200px;"></a>
-		<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height:200px; width:200px;"></a>
-		<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height:200px; width:200px;"></a>
-		<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height:200px; width:200px;"></a>
-		<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height:200px; width:200px;"></a>
-	<div>
-		<br>
-		<h2 class="headings">My Listings</h2>
-		<br>
-	</div>
+	<a href="item_listing_customer.html"><img src="Laptop.jpg" class="home-images" style="height:200px; width:200px;"></a>
+	<a href="item_listing_customer.html"><img src="Drill.jpg" class="home-images" style="height:200px; width:200px;"></a>
+	<a href="item_listing_customer.html"><img src="Shoes.jpg" class="home-images" style="height:200px; width:200px;"></a>
+	<a href="item_listing_customer.html"><img src="Watch.png" class="home-images" style="height:200px; width:200px;"></a>
 	<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height:200px; width:200px;"></a>
-	<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height:200px; width:200px;"></a>
-	<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height:200px; width:200px;"></a>
-	<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height:200px; width:200px;"></a>
-	<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height:200px; width:200px;"></a>
-<div>
+<div> -->
 
 	</div>
-
 
 </body>
 </div>

@@ -9,7 +9,8 @@
 		  float: left;
 		  height: 100%;
 		  z-index: 1010101010;
-
+		  outline-color: black;
+		  outline-style: inset;
 		}
 
 		#col-2 {
@@ -38,9 +39,19 @@
 			<span style="color: red;">E</span><span style="color: blue;">b</span><span style="color: yellow;">a</span><span style="color: green;">y</span>
 		</a>
 	</div>
-	<a href="categories.html">
-	<input type="button" value="Categories" style="cursor: pointer;"></a>
-		<input type="search" id="site-search" name="q">
+	<!-- This is the Category Dropdown Button-->
+	<select id="mySelect" onchange="goToPage2()">
+		<option value="">Categories</option>
+		<option value="Vehicle Parts">Vehicle Parts</option>
+		<option value="Electronics">Electronics</option>
+		<option value="Collectibles">Collectibles</option>
+		<option value="Home & Garden">Home & Garden</option>
+		<option value="Fashion">Fashion</option>
+		<option value="Sporting Goods">Sporting Goods</option>
+	</select>
+	
+	<!--Category Dropdown Button Ends Here-->
+	<input type="search" id="site-search" name="q">
 		<a href="search_results.html"><button>Search</button></a>
 		<br>
 		<br>

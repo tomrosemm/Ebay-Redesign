@@ -9,7 +9,8 @@
 		  float: left;
 		  height: 100%;
 		  z-index: 1010101010;
-
+		  outline-color: black;
+		  outline-style: inset;
 		}
 
 		#col-2 {
@@ -21,9 +22,7 @@
 		  text-align: center;
 		}
 		
-		#body_content {
-			
-		}
+		
 		
 		
 	</style>
@@ -43,7 +42,7 @@
 			<!-- This is the Category Dropdown Button-->
 			<select id="mySelect" onchange="goToPage2()">
 				<option value="">Categories</option>
-				<option value="Motors">Motors</option>
+				<option value="Vehicle Parts">Vehicle Parts</option>
 				<option value="Electronics">Electronics</option>
 				<option value="Collectibles">Collectibles</option>
 				<option value="Home & Garden">Home & Garden</option>
@@ -81,85 +80,216 @@
 		<div class="sale_items">
 			<div class="single_sale_item">
 				<img src="Item Sold.jpg" height="150" width="150">
-				<p>[Name of Item]</p>
-				<p>[Price]</p>
-				<p>[Time Remaining]</p>
+				<p>Applied Chemistry Textbook</p>
+				<p>$99</p>
+				<p>12 hours left</p>
 				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
-				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+				<button onclick="confirmAction()">Delete</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to delete the listing?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Listing was deleted");
+							window.location.href = "sell.html";
+						} else { // User clicked "Cancel"
+							alert("Listing was not deleted");
+						}
+					}
+				</script>
 
 			</div>
 			<div class="single_sale_item">
 				<img src="Item Sold.jpg" height="150" width="150">
-				<p>[Name of Item]</p>
-				<p>[Price]</p>
-				<p>[Time Remaining]</p>
+				<p>Applied Chemistry Textbook</p>
+				<p>$99</p>
+				<p>10 hours left</p>
 				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
-				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+				<button onclick="confirmAction()">Delete</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to delete the listing?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Listing was deleted");
+							window.location.href = "sell.html";
+						} else { // User clicked "Cancel"
+							alert("Listing was not deleted");
+						}
+					}
+				</script>
 			</div>
 			<div class="single_sale_item">
 				<img src="Item Sold.jpg" height="150" width="150">
-				<p>[Name of Item]</p>
-				<p>[Price]</p>
-				<p>[Time Remaining]</p>
+				<p>Applied Chemistry Textbook</p>
+				<p>$99</p>
+				<p>10 hours left</p>
 				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
-				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+				<button onclick="confirmAction()">Delete</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to delete the listing?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Listing was deleted");
+							window.location.href = "sell.html";
+						} else { // User clicked "Cancel"
+							alert("Listing was not deleted");
+						}
+					}
+				</script>
 			</div>
 			<div class="single_sale_item">
 				<img src="Item Sold.jpg" height="150" width="150">
-				<p>[Name of Item]</p>
-				<p>[Price]</p>
-				<p>[Time Remaining]</p>
+				<p>Applied Chemistry Textbook</p>
+				<p>$99</p>
+				<p>9 hours left</p>
 				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
-				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+				<button onclick="confirmAction()">Delete</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to delete the listing?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Listing was deleted");
+							window.location.href = "sell.html";
+						} else { // User clicked "Cancel"
+							alert("Listing was not deleted");
+						}
+					}
+				</script>
 			</div>
 			<div class="single_sale_item">
 				<img src="Item Sold.jpg" height="150" width="150">
-				<p>[Name of Item]</p>
-				<p>[Price]</p>
-				<p>[Time Remaining]</p>
+				<p>Applied Chemistry Textbook</p>
+				<p>$99</p>
+				<p>7 hours left</p>
 				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
-				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+				<button onclick="confirmAction()">Delete</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to delete the listing?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Listing was deleted");
+							window.location.href = "sell.html";
+						} else { // User clicked "Cancel"
+							alert("Listing was not deleted");
+						}
+					}
+				</script>
 			</div><br><br><br>
 			<div class="single_sale_item">
 				<img src="Item Sold.jpg" height="150" width="150">
-				<p>[Name of Item]</p>
-				<p>[Price]</p>
-				<p>[Time Remaining]</p>
+				<p>Applied Chemistry Textbook</p>
+				<p>$99</p>
+				<p>7 hours left</p>
 				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
-				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+				<button onclick="confirmAction()">Delete</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to delete the listing?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Listing was deleted");
+							window.location.href = "sell.html";
+						} else { // User clicked "Cancel"
+							alert("Listing was not deleted");
+						}
+					}
+				</script>
 
 			</div>
 			<div class="single_sale_item">
 				<img src="Item Sold.jpg" height="150" width="150">
-				<p>[Name of Item]</p>
-				<p>[Price]</p>
-				<p>[Time Remaining]</p>
+				<p>Applied Chemistry Textbook</p>
+				<p>$99</p>
+				<p>6 hours left</p>
 				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
-				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+				<button onclick="confirmAction()">Delete</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to delete the listing?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Listing was deleted");
+							window.location.href = "sell.html";
+						} else { // User clicked "Cancel"
+							alert("Listing was not deleted");
+						}
+					}
+				</script>
 			</div>
 			<div class="single_sale_item">
 				<img src="Item Sold.jpg" height="150" width="150">
-				<p>[Name of Item]</p>
-				<p>[Price]</p>
-				<p>[Time Remaining]</p>
+				<p>Applied Chemistry Textbook</p>
+				<p>$99</p>
+				<p>5 hours left</p>
 				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
-				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+				<button onclick="confirmAction()">Delete</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to delete the listing?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Listing was deleted");
+							window.location.href = "sell.html";
+						} else { // User clicked "Cancel"
+							alert("Listing was not deleted");
+						}
+					}
+				</script>
 			</div>
 			<div class="single_sale_item">
 				<img src="Item Sold.jpg" height="150" width="150">
-				<p>[Name of Item]</p>
-				<p>[Price]</p>
-				<p>[Time Remaining]</p>
+				<p>Applied Chemistry Textbook</p>
+				<p>$99</p>
+				<p>3 hours left</p>
 				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
-				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+				<button onclick="confirmAction()">Delete</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to delete the listing?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Listing was deleted");
+							window.location.href = "sell.html";
+						} else { // User clicked "Cancel"
+							alert("Listing was not deleted");
+						}
+					}
+				</script>
 			</div>
 			<div class="single_sale_item">
 				<img src="Item Sold.jpg" height="150" width="150">
-				<p>[Name of Item]</p>
-				<p>[Price]</p>
-				<p>[Time Remaining]</p>
+				<p>Applied Chemistry Textbook</p>
+				<p>$99</p>
+				<p>25 minutes left</p>
 				<a href="revise_listing.html"><input type="button" value="Edit" style="cursor: pointer;"></a>
-				<a href="not_yet_implemented.html"><input type="button" value="Delete" style="cursor: pointer;"></a>
+				<button onclick="confirmAction()">Delete</button>
+
+				<script>
+					function confirmAction() { 
+						//Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to delete the listing?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Listing was deleted");
+							window.location.href = "sell.html";
+						} else { // User clicked "Cancel"
+							alert("Listing was not deleted");
+						}
+						}
+				</script>
 			</div>
 		</div>
 		<br>

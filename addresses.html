@@ -9,7 +9,8 @@
 		  float: left;
 		  height: 100%;
 		  z-index: 1010101010;
-
+		  outline-color: black;
+		  outline-style: inset;
 		}
 
 		#col-2 {
@@ -63,7 +64,7 @@
 	<!-- This is the Category Dropdown Button-->
 	<select id="mySelect" onchange="goToPage2()">
 		<option value="Categories">Categories</option>
-		<option value="Motors">Motors</option>
+		<option value="Vehicle Parts">Vehicle Parts</option>
 		<option value="Electronics">Electronics</option>
 		<option value="Collectibles">Collectibles</option>
 		<option value="Home & Garden">Home & Garden</option>
@@ -98,14 +99,27 @@
 
 	<div class="address">
         <h3>Current Shipping Address:</h3> 
-		<p id="currentAddress">123 Main St, Anytown, USA</p> <!-- Replace with actual address -->
+		<p id="currentAddress">123 Main St, Anytown, USA</p> 
     </div>
 
     <div class="address">
         <h3>Add New Address: </h3>
         <form id="addAddressForm">
             <textarea id="newAddress" rows="2" cols="50"></textarea><br>
-            <input type="submit" value="Add Address">
+            <button onclick="confirmAction()">Add Address</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to add shipping address?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Shipping Address was added");
+							
+						} else { // User clicked "Cancel"
+							alert("Shipping address was not added");
+						}
+					}
+				</script>
         </form>
     </div>
 
@@ -114,27 +128,88 @@
         <div class="addressBox">
             <input type="radio" name="currentAddress">
             <span>456 Maple Ave, Somewhere, USA</span>
-            <button>Remove</button>
+            <button onclick="confirmAction()">Remove</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to this shipping address?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Shipping Address was deleted");
+						} else { // User clicked "Cancel"
+							alert("Shipping address was not deleted");
+						}
+					}
+				</script>
         </div>
         <div class="addressBox">
             <input type="radio" name="currentAddress">
             <span>789 Oak St, Elsewhere, USA</span>
-            <button>Remove</button>
+            <button onclick="confirmAction()">Remove</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to this shipping address?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Shipping Address was deleted");
+						} else { // User clicked "Cancel"
+							alert("Shipping address was not deleted");
+						}
+					}
+				</script>
         </div>
 		<div class="addressBox">
             <input type="radio" name="currentAddress">
             <span>789 Oak St, Elsewhere, USA</span>
-            <button>Remove</button>
+            <button onclick="confirmAction()">Remove</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to this shipping address?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Shipping Address was deleted");
+						} else { // User clicked "Cancel"
+							alert("Shipping address was not deleted");
+						}
+					}
+				</script>
         </div>
 		<div class="addressBox">
             <input type="radio" name="currentAddress">
             <span>1948 Buick Blv, Elsewhere, USA</span>
-            <button>Remove</button>
+            <button onclick="confirmAction()">Remove</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to this shipping address?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Shipping Address was deleted");
+						} else { // User clicked "Cancel"
+							alert("Shipping address was not deleted");
+						}
+					}
+				</script>
         </div>
 		<div class="addressBox">
             <input type="radio" name="currentAddress">
             <span>1290 CheryWood St, Elsewhere, USA</span>
-            <button>Remove</button>
+            <button onclick="confirmAction()">Remove</button>
+
+				<script>
+					function confirmAction() { //Popup Confirmation
+						const userConfirmed = confirm("Are you sure you want to this shipping address?");
+
+						if (userConfirmed) { // User clicked "OK"
+							alert("Shipping Address was deleted");
+							
+						} else { // User clicked "Cancel"
+							alert("Shipping address was not deleted");
+						}
+					}
+				</script>
         </div>
     </div>
 </div>

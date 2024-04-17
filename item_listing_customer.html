@@ -9,7 +9,8 @@
 		  float: left;
 		  height: 100%;
 		  z-index: 1010101010;
-
+		  outline-color: black;
+		  outline-style: inset;
 		}
 
 		#col-2 {
@@ -77,8 +78,8 @@
 		  <div class="content">
 			<input type="radio" id="Toys" value="Toys" name="Category Radio">
 			<label for="Toys">Toys</label><br>
-			<input type="radio" id="Motors" value="Motors" name="Category Radio">
-			<label for="Motors">Motors</label><br>
+			<input type="radio" id="Vehicle Parts" value="Vehicle Parts" name="Category Radio">
+			<label for="Vehicle Parts">Vehicle Parts</label><br>
 			<input type="radio" id="Electronics" value="Electronics" name="Category Radio">
 			<label for="Electronics">Electronics</label><br>
 			<input type="radio" id="Collectibles" value="Collectibles" name="Category Radio">
@@ -318,7 +319,7 @@
 	<!-- This is the Category Dropdown Button-->
 	<select id="mySelect" onchange="goToPage2()">
 		<option value="Categories">Categories</option>
-		<option value="Motors">Motors</option>
+		<option value="Vehicle Parts">Vehicle Parts</option>
 		<option value="Electronics">Electronics</option>
 		<option value="Collectibles">Collectibles</option>
 		<option value="Home & Garden">Home & Garden</option>
@@ -375,19 +376,19 @@
 
 	<div class="container centered">
 		<div class="wrapper-main item-desc-flex">
-			<img src="Item Sold.jpg" style="width:300px;height:300px;">
-			<span>Item Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, voluptatibus dolorem? Animi laborum officiis reiciendis tempore exercitationem ducimus corporis in voluptas ea quod quae alias, aut quisquam officia saepe quia!
-				
+			<img src="Lego2.jpg" style="width:300px;height:300px;">
+			<span>Set includes 6 minifigures with assorted accessory elements: Homer Simpson, Bart Simpson, Marge Simpson, Apu Nahasapeemapetilon, Chief Wiggum and Snake (a.k.a. Jailbird)
 			</span>
 			<div class="buttons">
-				<a href="not_yet_implemented.html"><input type="button"  class="button-seller" id="Buy/Bid" value="Buy/Bid" style="width:150px;height:75px; cursor: pointer;"></a>
-				<a href="seller_profile.html"><input type="button" value="Contact Seller" style="width:150px;height:75px;  cursor: pointer;"></a>
+				<a href="not_yet_implemented.html"><input type="button"  class="button-seller" id="Buy/Bid" value="Buy/Bid" style="width:150px;height:70px; cursor: pointer;"></a>
+				<a href="seller_profile.html"><input type="button" class="button-seller" value="Contact Seller" style="width:150px;height:70px;  cursor: pointer;"></a>
 			</div>
 
 			</div>
 			<div class="block wrapper-main item-desc-flex">
-			<p>Name  $</p>
-			<p>Seller Rating</p>
+			<p>The Simpson's Lego Set</p>
+			<p>$45</p>
+			<p>5*</p>
 			<br>
 			</div>
 	</div>
@@ -400,19 +401,19 @@
 	</div>
 	<div class="test ">
 		<div class="block similar-item-indent">
-		<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height: 200px; width: 200px;"></a>
+		<a href="item_listing_customer.html"><img src="Lego.jpg" class="home-images" style="height: 200px; width: 200px;"></a>
 	</div>
 		<div class="block">
-		<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height: 200px; width: 200px;"></a>
+		<a href="item_listing_customer.html"><img src="Pirate-Lego.jpg" class="home-images" style="height: 200px; width: 200px;"></a>
 	</div>
 		<div class="block">
-			<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height: 200px; width: 200px;"></a>
+			<a href="item_listing_customer.html"><img src="Lego-Car.jpg" class="home-images" style="height: 200px; width: 200px;"></a>
 		</div>
 	<div class="block">
-		<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height: 200px; width: 200px;"></a>
+		<a href="item_listing_customer.html"><img src="Starwar-Lego.jpg" class="home-images" style="height: 200px; width: 200px;"></a>
 	</div>
 	<div class="block">
-		<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height: 200px; width: 200px;"></a>
+		<a href="item_listing_customer.html"><img src="LegoPlant.png" class="home-images" style="height: 200px; width: 200px;"></a>
 	</div>
 	<br>
 	<br>
@@ -428,13 +429,22 @@
 		<br>
 		<br>
 		<h2 class="similar-text">Reviews</h2>
-		<input  class="text-review similar-item-indent" type="text-box" placeholder="Review of Item" style="text-align:justify;" id="review">
-	</div> 
+		<form>
+		<input  class="text-review similar-item-indent" type="text-box" placeholder="Review the Item!" style="text-align:justify;margin-left: -7%;" id="review">
+		<label for="star-rating">Choose a rating:</label> 
+    <select name="star-rating" id="stars"> 
+        <option value="5">5</option> 
+        <option value="4">4</option> 
+        <option value="3">3</option> 
+        <option value="2">2</option> 
+		<option value="1">1</option> 
+    </select>
+		<input type="submit" id="review-submit" name="review-submit" style="display:block;margin-bottom:20%;margin-left:25%;margin-top:-19%;">
+		</form>
 
+	</div> 
 	
 	</div>
-
-
 	
 <script src="js_1.js"></script>
 </body>
