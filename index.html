@@ -1,458 +1,160 @@
-<!doctype html>
-<html>
-<head>
-	<style>
+<!DOCTYPE html>
+<html lang="en">
 
-		#col-1 {
-		  position: relative;
-		  width: 20%;
-		  float: left;
-		  height: 100%;
-		  z-index: 1010101010;
-		  outline-color: black;
-		  outline-style: inset;
-		}
+    <head>
+        <title>Critical Path Calculator</title>
 
-		#col-2 {
-		  position: relative;
-		  width: 80%;
-		  float: left;
-		  height: 100%;
-		  z-index: 1010101010;
-		  text-align: center;
+        <style>
 
-		  .container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .image-container {
-            margin: 10px;
-            text-align: center;
-            max-width: 200px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-		}
+        </style>
 
-		
-	</style>
-    
-	<link href="css1.css" rel="stylesheet" type="text/css">
-	<meta charset="utf-8">
-	<title>Ebay Home</title>
-</head>
+        <!--Jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-<body>
-	<div id="col-1">
-		<h2>Advance Search</h2>
-		  <div class="center">
-			<a href="search_results.html"><input type="button" value="Submit"></a>
-			<br><br>
-			<label for="searchbar">Search Term or Item #: </label>
-			<input type="text" id="searchbar" name="searchbar">
-			<br><br>
-		</div>
-		  <button type="button" class="collapsible">Keywords/Item #s and Options</button>
-		  <div class="content">
-			<form action="">
-				<label for="Keywords or Item Numbers: ">Keywords or Item Numbers: </label><br>
-				<input type="text" id="Keywords or Item Numbers: " name="Keywords or Item Numbers: "><br><br>
+        <link rel="stylesheet" href="indexStyle.css">
+        <link rel="stylesheet" href="generalStyle.css">
 
-			<label for="Keyword Options">Keyword Options: </label><br>
-				<select name="All Words, Any Order" id="All Words, Any Order">
-					<option value="All Words, Any Order">All Words, Any Order</option>
-					<option value="Any Words, Any Order">Any Words, Any Order</option>
-					<option value="Exact Words, Exact Order">Exact Words, Exact Order</option>
-					<option value="Exact Words, Any Order">Exact Words, Any Order</option>
-				</select>
-				<br><br>
-				<form action="">
-					<label for="Exclude Words: ">Exclude Words: </label><br>
-					<input type="text" id="Exclude Words: " name="Exclude Words: "><br>
-				  </form> 
-		  </div>
-		  <button type="button" class="collapsible">Categories</button>
-		  <div class="content">
-			<input type="radio" id="Toys" value="Toys" name="Category Radio">
-			<label for="Toys">Toys</label><br>
-			<input type="radio" id="Vehicle Parts" value="Vehicle Parts" name="Category Radio">
-			<label for="Vehicle Parts">Vehicle Parts</label><br>
-			<input type="radio" id="Electronics" value="Electronics" name="Category Radio">
-			<label for="Electronics">Electronics</label><br>
-			<input type="radio" id="Collectibles" value="Collectibles" name="Category Radio">
-			<label for="Collectibles">Collectibles</label><br>
-			<input type="radio" id="Home & Garden" value="Home & Garden" name="Category Radio">
-			<label for="Home & Garden">Home & Garden</label><br>
-			<input type="radio" id="Fashion" value="Fashion" name="Category Radio">
-			<label for="Fashion">Fashion</label><br>
-			<input type="radio" id="Sporting Goods" value="Sporting Goods" name="Category Radio">
-			<label for="Sporting Goods">Sporting Goods</label><br>
-		  </div>
-		  <button type="button" class="collapsible">Search Including</button>
-			  <div class="content">
-				  <input type="checkbox" id="Title And Description" value="Title And Description">
-				  <label for="Title And Description">Title And Description</label> <br>
-
-				  <input type="checkbox" id="Completed Items" value="Completed Items">
-				  <label for="Completed Items">Completed Items</label> <br>
-
-				  <input type="checkbox" id="Sold Items" value="Sold Items">
-				  <label for="Sold Items">Sold Items</label> <br>
-		  </div>
-		  <button type="button" class="collapsible">Price</button>
-			  <div class="content">
-				  Show Items priced from <p id="minRangeValue">0</p>
-				  <input type="range" id="min" value="0" placeholder="Min Price" min="0" max="50" oninput="minRangeValue.innerText = this.value">
-				  to<p id="maxRangeValue">50</p>
-				  <input type="range" id="max" value="50" placeholder="Max Price" min="0" max="50" oninput="maxRangeValue.innerText = this.value">
-				  <br>
-				  
-		  </div>
-		  <button type="button" class="collapsible">Buying Format</button>
-			  <div class="content">
-				  <input type="checkbox" id="BUYF" value="BUYF">
-				  <label for="BUYF">Buy</label> <br>
-				  <input type="checkbox" id="BIDF" value="BIDF">
-				  <label for="BIDF">Bid</label> <br>
-		  </div>
-		  <button type="button" class="collapsible">Condition</button>
-			  <div class="content">
-				  <input type="radio" id="New" value="New" name="Condition Radio">
-				  <label for="New">New</label> <br>
-				  
-				  <input type="radio" id="Used" value="Used" name="Condition Radio">
-				  <label for="Used">Used</label> <br>
-
-				  <input type="radio" id="Not Specified" value="Not Specified" name="Condition Radio">
-				  <label for="Not Specified">Not Specified</label> <br>
-
-		  </div>
-		  <button type="button" class="collapsible">Show Results</button>
-			  <div class="content">
-				  <input type="checkbox" id="Free Returns" value="Free Returns">
-				  <label for="Free Returns">Free Returns</label> <br>
-
-				  <input type="checkbox" id="Returns Accepted" value="Returns Accepted">
-				  <label for="Returns Accepted">Returns Accepted</label> <br>
-				  
-				  <input type="checkbox" id="Authorized Seller" value="Authorized Seller">
-				  <label for="Authorized Seller">Authorized Seller</label> <br>
-				  
-				  <input type="checkbox" id="Deals and Savings" value="Deals and Savings">
-				  <label for="Deals and Savings">Deals and Savings</label> <br>
-				  
-				  <input type="checkbox" id="Sale Items" value="Sale Items">
-				  <label for="Sale Items">Sale Items</label> <br>
-				  
-				  <input type="checkbox" id="Listed as Lots" value="Listed as Lots">
-				  <label for="Listed as Lots">Listed as Lots</label> <br>
-				  
-				  <input type="checkbox" id="Benefits Charity" value="Benefits Charity">
-				  <label for="Benefits Charity">Benefits Charity</label> <br>
-				  
-				  <input type="checkbox" id="Authenticity guarantee" value="Authenticity guarantee">
-				  <label for="Authenticity guarantee">Authenticity guarantee</label> <br>
-
-				  <input type="checkbox" id="Items" value="Items">
-				  <label for="Items">Items </label>
-					  <select name="Ending Within" id="Ending Within">
-						  <option value="Ending Within">Ending Within </option>
-						  <option value="Ending in more Than">Ending in more Than </option>
-						  <option value="Started Within">Started Within </option>
-					  </select>
-					  <select name="1 hour" id="1 hour">
-						  <option value="1 hour">1 hour</option>
-						  <option value="2 hour">2 hour</option>
-						  <option value="3 hour">3 hour</option>
-						  <option value="4 hour">4 hour</option>
-						  <option value="5 hour">5 hour</option>
-						  <option value="12 hour">12 hour</option>
-						  <option value="24 hour">24 hour</option>
-						  <option value="2 Days">2 Days</option>
-						  <option value="3 Days">3 Days</option>
-						  <option value="4 Days">4 Days</option>
-						  <option value="5 Days">5 Days</option>
-						  <option value="6 Days">6 Days</option>
-						  <option value="7 Days">7 Days</option>
-					  </select> <br>
-				  
-				  <input type="checkbox" id="Number of Bids from" value="Number of Bids from">
-				  <label for="Number of Bids from">Number of Bids from </label>
-					  <select name="Lowest to Highest" id="Lowest to Highest">
-						  <option value="Lowest to Highest">Lowest to Highest </option>
-						  <option value="Highest to Lowest">Highest to Lowest </option>
-					  </select> <br>
-				  
-				  <input type="checkbox" id="Multiple Items From" value="Multiple Items From">
-				  <label for="Multiple Items From">Multiple Items (Quantity) From </label>
-					  <form action="">
-						  <label for="min">Min:</label><br>
-						  <input type="text" id="min" name="min"><br>
-						</form>
-				  <label for="to"> to </label>	
-					  <form action="">
-						  <label for="max">Max:</label><br>
-						  <input type="text" id="max" name="max"><br>
-						</form><br>
-		  </div>
-		  <button type="button" class="collapsible">Shipping Options</button>
-			  <div class="content">
-				  <input type="checkbox" id="Default" value="Default">
-				  <label for="Default">Default</label> <br>
-
-				  <input type="checkbox" id="Items Within" value="Items Within">
-				  <label for="Items Within">Items Within</label> 
-					  <select name="10" id="10">
-						  <option value="10">10 </option>
-						  <option value="25">25 </option>
-						  <option value="50">50 </option>
-						  <option value="100">100 </option>
-						  <option value="200">200 </option>
-						  <option value="500">500 </option>
-						  <option value="1000">1000 </option>
-					  </select>
-				  <label for="Miles of Zip Code">Miles of Zip Code</label><br>
-
-				  <input type="checkbox" id="US Only" value="US Only">
-				  <label for="US Only">US Only</label> <br>
-
-				  <input type="checkbox" id="North America" value="North America">
-				  <label for="North America">North America</label> <br>
-
-				  <input type="checkbox" id="Worldwide" value="Worldwide">
-				  <label for="Worldwide">Worldwide</label> <br>
-
-				  <input type="checkbox" id="Located In " value="Located In ">
-				  <label for="Located In ">Located In </label> 
-					  <select name="10" id="10">
-						  <option value="Brazil">Brazil </option>
-						  <option value="China">China </option>
-						  <option value="India">India </option>
-						  <option value="United States">United States </option>
-					  </select><br>
-
-				  <input type="checkbox" id="Available to " value="Available to ">
-				  <label for="Available to ">Available to </label>
-					  <select name="10" id="10">
-						  <option value="Brazil">Brazil </option>
-						  <option value="China">China </option>
-						  <option value="India">India </option>
-						  <option value="United States">United States </option>
-					  </select> <br>
-		  </div>
-		  <button type="button" class="collapsible">Item Location</button>
-			  <div class="content">
-				  <input type="checkbox" id="local" value="Local">
-					<label for="local">Local</label> <br>
-					<input type="checkbox" id="NA" value="NA">
-					<label for="NA">North America</label> <br>
-					<input type="checkbox" id="Worldwide" value="WorldWide">
-					<label for="Worldwide">Worldwide</label> <br>
-		  </div>
-		  <button type="button" class="collapsible">Seller</button>
-			  <div class="content">
-				  <input type="checkbox" id="Only Show Items From: " value="Only Show Items From: ">
-				  <label for="Only Show Items From: ">Only Show Items From: </label> <br>
-					  <select name="" id="">
-						  <option value="Include">Include </option>
-						  <option value="Exclude">Exclude </option>
-					  </select>
-					  <form action="">
-						  <label for="Specific Seller (ID)">Specific Seller (ID)</label><br>
-						  <input type="text" id="Specific Seller (ID)" name="Specific Seller (ID)"><br>
-						</form>
-
-				  <input type="radio" id="Sellers with Ebay Stores " value="Sellers with Ebay Stores" name="Seller Radio">
-				  <label for="Sellers with Ebay Stores ">Sellers with Ebay Stores </label>
-				  <br>
-				  
-				  <input type="radio" id="My Saved Sellers List" value="My Saved Sellers List" name="Seller Radio">
-				  <label for="My Saved Sellers List">My Saved Sellers List</label> <br>
-		  </div>
-		  <button type="button" class="collapsible">Results</button>
-			  <div class="content">
-				  <input type="checkbox" id="Sort By " value="Sort By ">
-				  <label for="Sort By ">Sort By </label>
-					  <select name="Time: Ending Soonest" id="Time: Ending Soonest">
-						  <option value="Time: Ending Soonest">Time: Ending Soonest </option>
-						  <option value="Time: Newly Listed">Time: Newly Listed </option>
-						  <option value="Price+Shipping: Lowest First">Lowest Total Price First</option>
-						  <option value="Price+Shipping: Highest First">Highest Total Price First</option>
-						  <option value="Distance: Nearest First">Distance: Nearest First </option>
-						  <option value="Distance: Farthest First">Distance: Farthest First </option>
-						  <option value="Best Match">Best Match </option>
-					  </select> <br>
-
-				  <input type="checkbox" id="View Results " value="View Results ">
-				  <label for="View Results ">View Results </label>
-					  <select name="Time: Ending Soonest" id="Time: Ending Soonest">
-						  <option value="List View">List View</option>
-						  <option value="Gallery View">Gallery View</option>
-					  </select> <br>
-
-				  <input type="checkbox" id="Results Per Page " value="Results Per Page ">
-				  <label for="Results Per Page ">Results Per Page </label>
-					  <select name="60" id="60">
-						  <option value="60">60</option>
-						  <option value="120">120</option>
-						  <option value="240">240</option>
-					  </select> <br>
-		  </div>
-		  <br>
-		  <br>
-		  <div class="center">
-			<a href="search_results.html">
-			  <input type="button" value="Submit"></a>
-		  </div>
-		  <br>
-  </div>
-	
-  <div id="col-2">
-	<div class="logo">
-		<a href="index.html">
-			<span style="color: red;">E</span><span style="color: blue;">b</span><span style="color: yellow;">a</span><span style="color: green;">y</span>
-		</a>
-	</div>
-
-	<select id="mySelect" onchange="goToPage2()">
-		<option value="Categories">Categories</option>
-		<option value="Vehicle Parts">Vehicle Parts</option>
-		<option value="Electronics">Electronics</option>
-		<option value="Collectibles">Collectibles</option>
-		<option value="Home & Garden">Home & Garden</option>
-		<option value="Fashion">Fashion</option>
-		<option value="Sporting Goods">Sporting Goods</option>
-	</select>
-
-	<input type="search" id="site-search" name="q">
-		<a href="search_results.html"><button>Search</button></a>
-		<br>
-		<br>
-		<div class="center">
-			<a href="help.html"><input type="button" value="Help" style="height:50px; width:100px; cursor: pointer;"></a>
-			<a href="buy.html"><input type="button" value="Buy" style="height:50px; width:100px;  cursor: pointer;"></a>
-			<a href="sell.html"><input type="button" value="Sell" style="height:50px; width:100px;  cursor: pointer;"></a>
-			<div class="dropdown">
-				<button class="dropbtn">Account</button>
-				<div class="dropdown-content">
-					<a href="not_yet_implemented.html">Change Username</a>
-					<a href="addresses.html">Change Addresses</a>
-					<a href="account_settings.html">Settings</a>
-					<a href="not_yet_implemented.html">My Ebay</a>
-				</div>
-			</div>
-		</div>
-		<br>
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--GoJS-->
+        <script src=" https://cdn.jsdelivr.net/npm/gojs@3.0.0/release/go.min.js "></script>
 
 
-		<div class="container">
-			<div class="image-container">
-				<h3 style="text-align: left;">Top Deals</h3>
-				<a href="item_listing_customer.html">
-					<img src="Plant.jpg" alt="Image 1" style="height:200px; width:200px;">
-					<p>House Plant     $45</p>
-				</a>
-			</div>
-			<div class="image-container">
-				<h3 style="visibility: hidden;">Placeholder Header</h3>
-				<a href="item_listing_customer.html">
-					<img src="WorkoutSet.jpg" alt="Image 2" style="height:200px; width:200px;">
-					<p>Dumbell Set     $35</p>
-				</a>
-			</div>
-			<div class="image-container">
-				<h3 style="visibility: hidden;">Placeholder Header</h3>
-				<a href="item_listing_customer.html">
-					<img src="TV.jpg" alt="Image 3" style="height:200px; width:200px;">
-					<p>Sylvania TV      $55</p>
-				</a>
-			</div>
-			<div class="image-container">
-				<h3 style="visibility: hidden;">Placeholder Header</h3>
-				<a href="item_listing_customer.html">
-					<img src="MRE.jpg" alt="Image 2" style="height:200px; width:200px;">
-					<p>Sealed MRE     $10</p>
-				</a>
-			</div>
-			<div class="image-container">
-				<h3 style="visibility: hidden;">Placeholder Header</h3>
-				<a href="item_listing_customer.html">
-					<img src="Book1.jpg" alt="Image 3" style="height:200px; width:200px;">
-					<p>Mythologies Book    $15</p>
-				</a>
-			</div>
-		</div>
-	
-		<div class="container">
-			<div class="image-container">
-				<h3 style="text-align: left;">More Items</h3>
-				<a href="item_listing_customer.html">
-					<img src="Laptop.jpg" alt="Image 1" style="height:200px; width:200px;">
-					<p>Dell Laptop    $139</p>
-				</a>
-			</div>
-			<div class="image-container">
-				<h3 style="visibility: hidden;">Placeholder Header</h3>
-				<a href="item_listing_customer.html">
-					<img src="Drill.jpg" alt="Image 2" style="height:200px; width:200px;">
-					<p>Milwaukee Drill     $30</p>
-				</a>
-			</div>
-			<div class="image-container">
-				<h3 style="visibility: hidden;">Placeholder Header</h3>
-				<a href="item_listing_customer.html">
-					<img src="Shoes.jpg" alt="Image 3" style="height:200px; width:200px;">
-					<p>Adidas Shoes    $60</p>
-				</a>
-			</div>
-			<div class="image-container">
-				<h3 style="visibility: hidden;">Placeholder Header</h3>
-				<a href="item_listing_customer.html">
-					<img src="Watch.png" alt="Image 2" style="height:200px; width:200px;">
-					<p>Zenith Chronomaster   $6,045</p>
-				</a>
-			</div>
-			<div class="image-container">
-				<h3 style="visibility: hidden;">Placeholder Header</h3>
-				<a href="item_listing_customer.html">
-					<img src="Item Sold.jpg" alt="Image 3" style="height:200px; width:200px;">
-					<p>Applied Chemistry Book  $50</p>
-				</a>
-			</div>
-		</div>
+        <!--Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    </head>
 
-		<!--
-	<div id="body_content">
-		<h2>Home</h2>
-		<br>
-		<h2 class="headings">Featured</h2>
-		<br>
-	</div>
-		<a href="item_listing_customer.html"><img src="Plant.jpg" class="home-images" style="height:200px; width:200px;"></a>
-		<a href="item_listing_customer.html"><img src="WorkoutSet.jpg" class="home-images" style="height:200px; width:200px;"></a>
-		<a href="item_listing_customer.html"><img src="TV.jpg" class="home-images" style="height:200px; width:200px;"></a>
-		<a href="item_listing_customer.html"><img src="MRE.jpg" class="home-images" style="height:200px; width:200px;"></a>
-		<a href="item_listing_customer.html"><img src="Book1.jpg" class="home-images" style="height:200px; width:200px;"></a>
-	<div>
-		<br>
-		<h2 class="headings">Top Deals</h2>
-		<br>
-	</div>
-	<a href="item_listing_customer.html"><img src="Laptop.jpg" class="home-images" style="height:200px; width:200px;"></a>
-	<a href="item_listing_customer.html"><img src="Drill.jpg" class="home-images" style="height:200px; width:200px;"></a>
-	<a href="item_listing_customer.html"><img src="Shoes.jpg" class="home-images" style="height:200px; width:200px;"></a>
-	<a href="item_listing_customer.html"><img src="Watch.png" class="home-images" style="height:200px; width:200px;"></a>
-	<a href="item_listing_customer.html"><img src="Item Sold.jpg" class="home-images" style="height:200px; width:200px;"></a>
-<div> -->
+    <body>
+        
+        <!--List of page links is cool-->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
 
-	</div>
+        <div class="TopSection">
+            <h3 id="CPCHeader" class="display-3"><strong>Critical Path Calculator</strong></h3>
+            <a href="help.html"><img src="images/infoicon.jpg" id="infoicon" data-bs-toggle="tooltip" data-bs-html="true" title="*Click* this info icon to go to the full help page. To select multiple predecessors or successors, *ctrl + click* additional options. Both predecessors and successors must be selected. Leaving one or the other empty will result in invalid data for boundary time calculations. Names cannot contain special characters. Duration values must be whole numbers 0 or greater. All of your current input must be of a valid type in order to enable the calculate button.  To undo changes made to the graph, use *ctrl + z*, and to redo changes use *ctrl + y*."></a>
+        </div>
 
-</body>
-</div>
-	
-<script src="js_1.js"></script>
-</body>
+        <!--So we need the input of each row to be stored as an object with the value of each selection, localized to each cell, as a value in the object, whenever the add button, calculate button, or one of the drop down menus are pressed
+        If the specific object already exists, we need to update it with the new details. If it doesn't already exist, we need to create a new object with it's details. In order to allow for this updating, we probably need to implement a counter system of 
+        some sort as well to add an index to the row objects and allow us to update the rows while still checking against same named rows. This should allow us to also populate the predecessor and successor tables by just selecting those values from those fields in 
+        all of the row objects, possibly filtered by location on table as proposed if we decide to go with that. In this system the delete button would also need to not only delete the row and associated object, but also shift the index of all following row objects in the table-->
+
+        <!--Events we should consider triggers for updating this set of arrays: Clicking on dropdown for either predecessor 
+        or successor; clicking add row button; Clicking Delete Row Button; Clicking Calculate Button; Form change -->
+        <div class="scrollATable">
+            <table class="possibleInputTable" id="myTable">
+                <tr>
+                    <th style="width: 14%;">Name</th>
+                    <th style="width: 14%;">Predecessors</th>
+                    <th style="width: 14%;">Successors</th>
+                    <th style="width: 10%;">Duration</th>
+                    <th style="width: 8%;">EST</th>
+                    <th style="width: 8%;">EFT</th>
+                    <th style="width: 8%;">LST</th>
+                    <th style="width: 8%;">LFT</th>
+                    <th style="width: 8%;">Slack Time</th>
+                    <th style="width: 8%;">Delete Row</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control form-control-lg name-input" placeholder="Name" size="15">
+                    </td>
+                    <td>
+                        <select class="form-select presuc-input predecessor" name="predecessors[]" placeholder="Predecessors" multiple="MULTIPLE">
+                            <option></option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-select presuc-input successor" name="successors[]" placeholder="Successors" multiple="MULTIPLE">
+                            <option></option>
+                        </select>
+                    </td>
+                    <td><input type="text" class="form-control form-control-lg" placeholder="Duration" size="7"></td>
+                    <td><div class="alert alert-success" style="margin:auto; width: 75px; height: 50px"></td>
+                    <td><div class="alert alert-success" style="margin:auto; width: 75px; height: 50px"></td>
+                    <td><div class="alert alert-success" style="margin:auto; width: 75px; height: 50px"></td>
+                    <td><div class="alert alert-success" style="margin:auto; width: 75px; height: 50px"></td>
+                    <td><div class="alert alert-success" style="margin:auto; width: 75px; height: 50px"></td>
+                    <td><input type="button" class="btn btn-danger" style="height: 50px;" value="Delete Row" onclick="deleteRow(this)"></td> <!--deleteLogic(this)-->
+                </tr>
+
+                
+            </table>
+
+        </div>
+
+
+        <div class="center" id="buttonGroup">
+            <div>
+                <button type="button" class="btn btn-success" id="addButton">Add Row</button>
+            </div>
+
+            <div class="calculatetooltip">
+
+                <!-- Here is the calculate button, this should call the script to calculate everything -->
+                <div id="calculateicon">
+                    <button type="button" class="btn btn-primary btn-large" id="calculateButton" onclick="calculate();" disabled>Calculate</button>
+                </div>
+                </a>
+
+            </div>
+        </div>
+        <br><br>
+
+        <div class="center">
+            <hr id="horizontalsplit">
+        </div>
+
+        <div class="twocolumns">
+            <div class="col1" style="padding: 3%;">
+
+                <div class="center">
+                    <img src="images/sampleplaceholder.png">
+                </div>
+
+                <div class="center">
+                    <h4>Toggle Slack Time / Duration</h4>
+                    <p>On</p>
+                </div>
+                <div class="center">
+                <div class="toggle-container">
+                    <input type="checkbox" id="toggle" checked>
+                    <label class="toggle" for="toggle" id="toggle-label"></label>
+                </div>
+                </div>
+
+                <div class="center">
+                    <p>Off</p>
+                </div>
+
+
+            </div>
+
+            <div class="col2" style="padding: 3%;">
+                <div class="scrolling-wrapper">
+                    <div class="card" id="graph" style="width: 100%; height: 500px;"></div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--Custom scripts-->
+        <script>
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        </script>
+        <script src="mainScript.js"></script>
+        <script src="dataManagement.js"></script>
+        <script src="inputValidation.js"></script>
+        <script src="graph.js"></script>
+        <script src="boundaryTimeCalc.js"></script>
+    </body>
 </html>

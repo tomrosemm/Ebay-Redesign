@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Critical Path Calculator</title>
+
+  <style>
+
+  </style>
+
+  <!--Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="indexStyle.css">
+  <link rel="stylesheet" href="generalStyle.css">
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+  <!--List of page links is cool-->
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="help.html">Help</a></li>
+</ul>
+
+  <div class="TopSection">
+    <h1 id="CPCHeader">Critical Path Calculator</h2>
+      <a href="help.html"><img src="images/infoicon.jpg" id="infoicon"></a>
+  </div>
+
+  <!--So we need the input of each row to be stored as an object with the value of each selection, localized to each cell, as a value in the object, whenever the add button, calculate button, or one of the drop down menus are pressed
+        If the specific object already exists, we need to update it with the new details. If it doesn't already exist, we need to create a new object with it's details. In order to allow for this updating, we probably need to implement a counter system of 
+        some sort as well to add an index to the row objects and allow us to update the rows while still checking against same named rows. This should allow us to also populate the predecessor and successor tables by just selecting those values from those fields in 
+        all of the row objects, possibly filtered by location on table as proposed if we decide to go with that. In this system the delete button would also need to not only delete the row and associated object, but also shift the index of all following row objects in the table-->
+
+  <!--Select options need to allow multiple selection I believe, based on how the set up works?-->
+  <div class="scrollATable">
+    <table class="possibleInputTable" id="myTable">
+      <tr>
+        <th style="width: 14%;">Name</th>
+        <th style="width: 14%;">Predecessors</th>
+        <th style="width: 14%;">Successors</th>
+        <th style="width: 10%;">Duration</th>
+        <th style="width: 8%;">EST</th>
+        <th style="width: 8%;">EFT</th>
+        <th style="width: 8%;">LST</th>
+        <th style="width: 8%;">LFT</th>
+        <th style="width: 8%;">Slack Time</th>
+        <th style="width: 8%;">Delete Row</th>
+    </tr>
+      <tr>
+          <td>
+              <input type="text" class="form-control form-control-lg name-input" placeholder="Name" size="15">
+          </td>
+          <td>
+              <select class="form-select presuc-input predecessor" name="predecessors[]" placeholder="Predecessors" multiple="MULTIPLE">
+                  <option></option>
+              </select>
+          </td>
+          <td>
+              <select class="form-select presuc-input successor" name="successors[]" placeholder="Successors" multiple="MULTIPLE">
+                  <option></option>
+              </select>
+          </td>
+          <td><input type="text" class="form-control form-control-lg" placeholder="Duration" size="7"></td>
+          <td><div class="alert alert-success" style="margin:auto; width: 75px; height: 50px"></td>
+          <td><div class="alert alert-success" style="margin:auto; width: 75px; height: 50px"></td>
+          <td><div class="alert alert-success" style="margin:auto; width: 75px; height: 50px"></td>
+          <td><div class="alert alert-success" style="margin:auto; width: 75px; height: 50px"></td>
+          <td><div class="alert alert-success" style="margin:auto; width: 75px; height: 50px"></td>
+          <td><input type="button" class="btn btn-danger" style="height: 50px;" value="Delete Row" onclick="deleteRow(this)"></td> <!--deleteLogic(this)-->
+      </tr>
+
+      
+  </table>
+
+  </div>
+
+
+  <div class="center" id="buttonGroup">
+    <div>
+      <button type="button" class="btn btn-success" id="addButton">Add Row</button>
+    </div>
+
+    <div class="calculatetooltip">
+
+      <!-- Here is the calculate button, this should call the script to calculate everything -->
+      <div id="calculateicon">
+        <button type="button" class="btn btn-primary btn-large" id="calculateButton"  onclick="showSpinner()">Calculate</button>
+      </div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="center" style="margin: 1%;">
+    <div class="spinner-grow text-info d-none"></div>
+  </div>
+  <br><br>
+
+  <div class="center">
+    <hr id="horizontalsplit">
+  </div>
+
+  <div class="twocolumns">
+    <div class="col1" style="padding: 3%;">
+
+      <div class="center">
+        <img src="images/infographicplaceholder.jpg">
+      </div>
+
+      <div class="center">
+        <h4>Toggle Slack Time / Duration</h4>
+        <p>Off</p>
+      </div>
+      <div class="center">
+        <div class="toggle-container">
+          <input type="checkbox" id="toggle">
+          <label class="toggle" for="toggle" id="toggle-label"></label>
+        </div>
+      </div>
+
+      <div class="center">
+        <p>On</p>
+      </div>
+
+
+    </div>
+
+    <div class="col2" style="padding: 3%;">
+      <div class="scrolling-wrapper">
+        <div class="card" id="graph" style="border: solid 1px blue; width:100%; height:500px"></div>
+        <script src=" https://cdn.jsdelivr.net/npm/gojs@3.0.0/release/go.min.js "></script>
+        <script src="graph.js"></script>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="mainScript.js"></script>
+  <script src="dataManagement.js"></script>
+  
+
+  <!--Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

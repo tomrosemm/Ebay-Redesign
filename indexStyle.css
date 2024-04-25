@@ -1,0 +1,62 @@
+#CPCHeader {
+  text-decoration: black underline 3px;
+  float: left;
+  font-size: 48;
+}
+
+#infoicon {
+  float: right;
+  padding-left: 25px;/* |~~~~~~~~~~~~~~~|      Keep in pairs or the image isn't square*/
+  padding-top: 25px;/*  |~~~~~~~~~~~~~~~|    Keep in pairs or the image isn't square*/
+  width: 70px;/*        |               |      Keep in pairs or the image isn't square*/
+  height: 70px;/*    /~~\            /~~\    Keep in pairs or the image isn't square*/
+}/*                  \__/            \__/   Keep in pairs or the image isn't square*/
+
+#plusicon {
+  margin: auto;
+  padding-top: 5px;
+}
+
+#calculateicon {
+  text-align: center;
+}
+
+#calculateButton {
+  width: 200px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+#plusButton {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#blocksforscrolling {
+  text-align: justify;
+}
+
+#horizontalsplit {
+  border: none;
+  width: 88%;
+  height: 3px;
+  background-color: black;
+  margin: auto;
+}
+
+/* Original scrollable div class for current index.html page*/
+div.scroll {
+  margin: 4px, 4px;
+  padding: 4px;
+  background-color: white;
+  max-width: 90%;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

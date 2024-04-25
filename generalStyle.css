@@ -1,0 +1,272 @@
+.center {
+    text-align: center;
+}
+
+.TopSection {
+    display: inline-block;
+    padding: 1% 1%;
+}
+
+.twocolumns {
+    display: flex;
+    text-align: justify;
+}
+
+.col1 {
+    width: 40%;
+    background-color: white;
+    flex: 1;
+    border-right: 3px solid gray;
+}
+
+.col2 {
+    width: 60%;
+    background-color: white;
+    flex: 2;
+    text-align: center;
+    padding-top: 5%;
+    margin: auto;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 75%;
+    margin: auto;
+
+    .card {
+        display: inline-block;
+    }
+}
+
+.toggle-container {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    /* adjust width as needed */
+    height: 170px;
+    /* adjust height as needed */
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00274c;
+    /* change background color for unchecked state */
+    border-radius: 25px;
+    /* make it round */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    /* width of the toggle */
+    height: 40px;
+    /* height of the toggle */
+    background-color: white;
+    border-radius: 50%;
+    /* make it round */
+    top: 5px;
+    /* adjust top position */
+    left: 5px;
+    /* adjust left position */
+    transition: transform 0.3s;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .toggle {
+    background-color: #ccc;
+    /* change background color when checked */
+}
+
+input[type="checkbox"]:checked + .toggle:before {
+    transform: translateY(300%);
+    /* move toggle down when checked */
+}
+
+.backbutton {
+    cursor: pointer;
+}
+
+.inputRow {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-top: 5px;
+}
+
+/* Bootstrap gives tables a serious issue so be very careful before using boot with this table specifically */
+
+.possibleInputTable {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.possibleInputTable, .possibleInputTable th, .possibleInputTable td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.possibleInputTable th, .possibleInputTable td {
+    padding: 10px;
+    /*Control height of table cells*/
+}
+
+/* Header */
+.possibleInputTable th {
+    background-color: #888;
+}
+
+/* Stripes */
+.possibleInputTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.scrollATable {
+    width: 80%;
+    max-height: 502px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+}
+
+#addButton {
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    overflow-y: auto;
+    max-height: 100px;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.dropdown-content label {
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown-content label:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.selected-items {
+    width: 100px;
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.selected-items div {
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.presuc-input {
+    max-height: 70px;
+}
+
+.table-input {
+    line-height: 2em;
+}

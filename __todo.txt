@@ -1,0 +1,23 @@
+* Add anything you think of, Initial things you know you're on if you'd like
+
+* CODING
+TODO: (XJ) Moving graph code from data_testing to index.html
+TODO:(XS M) Input validation/cleaning
+TODO:(S M) See if we can eliminate tasks own name from list of predecessors/successors available to it - maybe a separate function that checks current table row and deletes any matches being populated to it that have the same name as the current task name. If we shove that in the end of the update predecessors successors would that work?
+TODO:(XM) Boundary times calculating and displaying to table
+TODO:(XT - Keep adding quick usage info as needed) Quick Info in some form on main page, try as a div canvas or card type element on upper right of screen above graph in line with title. Contain quick usage tips for multiple menus and graph viewer, etc
+TODO:(XT J) Populate cards on help page with different topics
+TODO:(XJ) Make relevant info appear on graph with function tied to toggle triggers for on and off (Potentially remove from scope to make deadline?)
+TODO:(XT) Replace sample picture for toggle info (currently the green circle)
+TODO:(XT) Delete button fill space better
+TODO:(XJ) Calculate critical path - Done
+TODO:(XT) Remove testing pages links
+TODO: (If time allows) Start script with calculate button disabled to not allow blank erroneous input
+TODO:(XT) Disable or time spinner
+TODO: Check for documentation needs everywhere
+
+*OTHER
+TODO: Testing
+TODO: Presentation
+TODO: Updated design/testing documents?
+TODO: Timecards
